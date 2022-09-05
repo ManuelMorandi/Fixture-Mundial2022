@@ -4,11 +4,8 @@
 | Identificación del proyecto
 |-----------
 | Fundamentos de Ingeniería de Software
-M3A (Matturro - Yang)
-M4A (Adorjan- Falco)
-M3B/M4B (Adorjan - Kidd)
-N3A / N4A (Ferreiro-Falco-Kidd)
-Estudiantes: 
+M4B (Adorjan - Kidd)
+Estudiantes: Tadeo Goday, Alfredo Fernandez, Manuel Morandi 
 
 Lectura: 21-mar-2022
 Entrega 1: 2-may-2022
