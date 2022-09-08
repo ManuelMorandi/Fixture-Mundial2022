@@ -6,12 +6,12 @@
 | M4B (Adorjan - de Leon) |
 | Estudiantes: Tadeo Goday, Alfredo Fernandez, Manuel Morandi  |
 
-Lectura: 29/ago/2022
-Entrega 1: 3/oct/2022
+Lectura: 29-ago-2022
+Entrega 1: 03-oct-2022
 
 Code freeze: **FALTA_FECHA**
 
-Entrega 2: 28/nov/2022
+Entrega 2: 28-nov-2022
 
 [Letra del proyecto](letra.md)
 
