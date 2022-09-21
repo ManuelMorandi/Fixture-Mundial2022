@@ -203,7 +203,7 @@ Descripción: La posibilidad de competir por puntos prediciendo el resultado de 
     
     Prioridad: Media-Baja
     
-    Referencia: ENT01 e Ingeniería de Requerimientos
+    Referencia: ENT01 e Ingeniería Inversa
     
 - RF7: Predicciones de Situaciones Objetivas en los Partidos
     
@@ -214,7 +214,96 @@ Descripción: La posibilidad de competir por puntos prediciendo el resultado de 
     Prioridad: Media-Baja
     
     Referencia: ENT01 y lluvia de ideas
-            
+    
+- RF8: Higlights de los Partidos
+    
+    Actor: Usuario
+    
+    Descripción: Videos de aproximadamente 10 minutos, en los cuales, una vez terminado el partido, se muestran los momentos mas importantes de los mismos.
+    
+    Prioridad: Media-Alta
+    
+    Referencia: ENT01
+    
+- RF9: Guardar en calendar
+    
+    Actor: Usuario
+    
+    Descripción: La posibilidad de vincular la app con google calendar agregar al mismo los partidos que uno desee.
+    
+    Prioridad: Media
+    
+    Referencia: ENT01
+    
+- RF10: Notificación por Penca
+    
+    Actor: Usuario
+    
+    Descripción: Notificar a aquellos usuarios que se encuentran dentro de un grupo de penca y no han puesto la predicción de partidos que empiezan en poco tiempo.
+    
+    Prioridad: Media-Baja
+    
+    Referencia: ENT01
+    
+- RF11: Compartir
+    
+    Actor: Usuario
+    
+    Descripción: Poder compartir los grupos de penca y los resultados de las predicciones en redes sociales.
+    
+    Prioridad: Media
+    
+    Referencia: ENT01
+    
+- RNF1: Fuente
+    
+    Descripción: Utilizar la tipografía Roboto para la letra.
+    
+    Prioridad: Alta
+    
+- RNF2: Colores
+    
+    Descripción: La paleta de colores debe consistir de green 900 como color principal y de light blue 800 como color secundario.
+    
+    Prioridad: Alta
+    
+- RNF3: Iconos
+    
+    Descripción: Los iconos deben ser en formato filled.
+    
+    Prioridad: Alta
+    
+- RNF4: Imágenes genéricas
+    
+    Descripción: Se deberán usar imágenes de uso libre para evitar complicaciones.
+    
+    Prioridad: Media
+    
+    Referencia: ENT01 
+    
+- RNF5: Minuto a minuto en vivo
+    
+    Descripción: El minuto a minuto del partido debería de actualizarse en vivo (con un retardo de menos de 2 minutos) para agregar los eventos a medida que sucedan.
+    
+    Prioridad: Media Baja
+    
+    Referencia: Lluvia de Ideas
+    
+- RNF6: Diseño minimalista
+    
+    Descripción: Un máximo de 6 botones por pantalla para que la aplicación sea sencilla para todo el mundo
+    
+    Prioridad: Media
+    
+    Referencia: ENT01
+    
+- RNF6: Botones grandes
+    
+    Descripción: Los botones pertenecientes al menú deberían ocupar todo el ancho de la pantalla y 1/10 de la pantalla de largo
+    
+    Prioridad: Media
+    
+    Referencia: ENT01
     
 
 ### User Stories / Use Cases detallados
