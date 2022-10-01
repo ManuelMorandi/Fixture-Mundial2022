@@ -2,9 +2,9 @@ Carpeta para bocetos de interfaz de usuario
 
 Vincular y explicar en el informe académico
 
-![boceto_inicio](Prototipo_Inicio.png)
-![boceto_detallesPartido](Prototipo_DetallesPartido.png)
-![boceto_partidosParaPredecir](Prototipo_PartidosParaPredecir.png) 
-![boceto_fixture](Prototipo_Fixture.png)
-![boceto_perfil](Prototipo_Perfil.png)
-![boceto_grupos](Prototipo_Grupos.png)
+![boceto_inicio](Prototipo_Inicio.png =300x500)
+![boceto_detallesPartido](Prototipo_DetallesPartido.png =200x500)
+![boceto_partidosParaPredecir](Prototipo_PartidosParaPredecir.png =300x600) 
+![boceto_fixture](Prototipo_Fixture.png =200x400)
+![boceto_perfil](Prototipo_Perfil.png =100x400)
+![boceto_grupos](Prototipo_Grupos.png =400x750)
