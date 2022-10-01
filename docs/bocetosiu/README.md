@@ -1,7 +1,7 @@
 # Carpeta para bocetos de interfaz de usuario
 <table align="left" valign="top">
   <tr align="left" valign="top">
-    <th width="350">
+    <th width="325">
        <a>Pantalla inicial de la interfaz de usuario, contiene sponsors, noticias y próximos partidos:</a>
        <br><br><br><br>
        <img src="Prototipo_Inicio.png" width="300">
@@ -18,7 +18,7 @@
      </th>
   </tr>
   <tr align="left" valign="top">
-    <th width="350">
+    <th width="325">
         <a>La pantalla de Fixture lleva a una lista de los partidos que se jugarán, cada partido posee un boton que permite activar una notificación que alertará todo sobre el partido:</a>
         <br><br>
         <img src="Prototipo_Fixture.png" width="300">
