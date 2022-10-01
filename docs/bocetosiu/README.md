@@ -3,7 +3,7 @@
   <tr align="left" valign="top">
     <th width="330">
        <a>Pantalla inicial de la interfaz de usuario, contiene sponsors, noticias y próximos partidos:</a>
-       <br><br><br><br>
+       <br><br><br><br><br>
        <img src="Prototipo_Inicio.png" width="300">
     </th>
     <th width="330">
@@ -25,7 +25,7 @@
     </th>
     <th width="330">
         <a>Pantalla de Perfil, muestra diferente información del usuario y sus puntos. Hay 2 botones extra para editar el perfil y otro para leer los terminos y condiciones de la aplicación:</a>
-        <br><br><br>
+        <br><br>
         <img src="Prototipo_Perfil.png" width="300">
     </th>
     <th width="330">
