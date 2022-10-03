@@ -56,61 +56,27 @@ Las consultas del obligatorio (sobre alcance de la letra o sobre tecnologías) d
 
 | Área | Objetivos | Puntos |
 | --- | --- | --- |
-| Repositorio Git | Creación y uso de repositorios locales y remotos
-Comandos Git ejecutados desde terminal y desde el IDE | 5 |
-| Versionado | Aplicar buenas prácticas de versionado
-Uso de ramas separadas de 'main'
-Resumen de commits y evolución del proyecto | 5 |
-| Elicitación | Evidencia de actividades de investigación
-Referencias a fuentes de información
-Caracterización de usuarios: User Personas
-Modelo conceptual del problema | 5 |
-| Especificación | Definición de requerimientos funcionales y no funcionales
-User Stories / Use Cases detallados
-Bocetos de IU | 5 |
-| Validación y
-verificación | Verificar la especificación
-Validar la solución con personas no involucradas en el proyecto | 3 |
-| Reflexión | Detalle del trabajo individual
-Técnicas aplicadas y aprendizajes | 2 |
+| Repositorio Git | Creación y uso de repositorios locales y remotos<br>Comandos Git ejecutados desde terminal y desde el IDE | 5 |
+| Versionado | Aplicar buenas prácticas de versionado<br>Uso de ramas separadas de 'main'<br>Resumen de commits y evolución del proyecto | 5 |
+| Elicitación | Evidencia de actividades de investigación<br>Referencias a fuentes de información<br>Caracterización de usuarios: User Personas<br>Modelo conceptual del problema | 5 |
+| Especificación | Definición de requerimientos funcionales y no funcionales<br>User Stories / Use Cases detallados<br>Bocetos de IU | 5 |
+| Validación y verificación | Verificar la especificación<br>Validar la solución con personas no involucradas en el proyecto | 3 |
+| Reflexión | Detalle del trabajo individual<br>Técnicas aplicadas y aprendizajes | 2 |
 
 ## Evaluación entrega 2 (code freeze: 21-nov-2022 / test otro proyecto: 28-nov-2022)
 
 | Área | Objetivos | Puntos |
 | --- | --- | --- |
-| Construcción | Implementación de funciones principales (sin la necesidad de persistencia de datos)
-Documentación del uso de librerías externas (package.json) | 5 |
-| Interfaz de
-usuario | Interfaz de usuario web / mobile (responsive)
-Página única con navegación entre secciones
-Implementación: Material Design Web Components
-Aplicar un sistema de diseño y principios de usabilidad
-Cumplimiento de estándar de accesibilidad WCAG
-Seguir especificación de estilo | 5 |
-| Codificación | IDE Visual Studio Code: configuración común del equipo
-Estándares de codificación Google (HTML, CSS, JavaScript)
-Buenas prácticas de OOP: separación de lógica e interfaz
-Análisis estático de código: mostrar reducción de problemas | 5 |
-| Test unitario | Test unitarios en Jest
-100% cobertura en clases de dominio | 5 |
-| Code freeze | En la semana previa a la entrega se debe congelar el desarrollo.
-A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación de informes. |  |
-| Test de sistema | Realizar test de sistema (se asigna otro proyecto)
-Ambiente de testing independiente del desarrollo
-Generar casos de prueba aplicando técnica partición equivalente
-Detallar sesiones de prueba exploratoria | 3 |
-| Reporte de issues | Reportar issues (bugs, improvements, missing features) en GitHub
-Aplicar buenas prácticas de reporte de issues
-Definir labels para tipos de issue y niveles de severidad | 2 |
-| Informe de calidad
-del sistema | Sumarizar número de issues reportados por tipo
-Realizar una evaluación global de la calidad | 3 |
-| Reflexión | Detalle del trabajo individual
-Técnicas aplicadas y aprendizajes | 2 |
-| Presentación en
-clase | Práctica o tecnología de ingeniería de software aplicada en el proyecto
-Mostrar ejemplos de aplicación y recomendaciones útiles
-Duración aproximada de media hora | 5 |
+| Construcción | Implementación de funciones principales (sin la necesidad de persistencia de datos)<br>Documentación del uso de librerías externas (package.json) | 5 |
+| Interfaz de usuario | Interfaz de usuario web / mobile (responsive)<br>Página única con navegación entre secciones<br>Implementación: Material Design Web Components<br>Aplicar un sistema de diseño y principios de usabilidad<br>Cumplimiento de estándar de accesibilidad WCAG<br>Seguir especificación de estilo | 5 |
+| Codificación | IDE Visual Studio Code: configuración común del equipo<br>Estándares de codificación Google (HTML, CSS, JavaScript)<br>Buenas prácticas de OOP: separación de lógica e interfaz<br>Análisis estático de código: mostrar reducción de problemas | 5 |
+| Test unitario | Test unitarios en Jest<br>100% cobertura en clases de dominio | 5 |
+| Code freeze | En la semana previa a la entrega se debe congelar el desarrollo.<br>A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación de informes. |  |
+| Test de sistema | Realizar test de sistema (se asigna otro proyecto)<br>Ambiente de testing independiente del desarrollo<br>Generar casos de prueba aplicando técnica partición equivalente<br>Detallar sesiones de prueba exploratoria | 3 |
+| Reporte de issues | Reportar issues (bugs, improvements, missing features) en GitHub<br>Aplicar buenas prácticas de reporte de issues<br>Definir labels para tipos de issue y niveles de severidad | 2 |
+| Informe de calidad del sistema | Sumarizar número de issues reportados por tipo<br>Realizar una evaluación global de la calidad | 3 |
+| Reflexión | Detalle del trabajo individual<br>Técnicas aplicadas y aprendizajes | 2 |
+| Presentación en clase | Práctica o tecnología de ingeniería de software aplicada en el proyecto<br>Mostrar ejemplos de aplicación y recomendaciones útiles<br>Duración aproximada de media hora | 5 |
 
 ## Especificación de estilo
 
