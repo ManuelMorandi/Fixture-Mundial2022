@@ -147,7 +147,7 @@ Finalmente, en el aspecto estético, Guillermo recomendó un diseño minimalista
 
 ### Modelo conceptual del problema
 
-![UML](imagenes/uml.jpg)
+![UML](imagenes/UML.jpg)
 
 ## Especificación
 
@@ -474,7 +474,7 @@ Cursos alternativos:
 
 1.1: Si no hay noticias disponibles, no se muestra ninguna. Fin del caso de uso.
 
-<img src="bocetosui/Prototipo_LeerNoticia.png" width="300"><br>
+<img src="bocetosiu/Prototipo_LeerNoticia.png" width="300"><br>
 
 **UC #2**
 
@@ -499,7 +499,7 @@ Cursos alternativos:
 
 4.1: Si por alguna razón existe algún problema a la hora de subir, se notifica y reporta el fallo. La noticia redactada se guarda como un borrador.
 
-<img src="bocetosui/Prototipo_Noticia.png" width="300"><img src="bocetosui/Prototipo_CrearNoticia.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Noticia.png" width="300"><img src="bocetosiu/Prototipo_CrearNoticia.png" width="300"><br>
 
 **UC #3**
 
@@ -523,7 +523,7 @@ Cursos alternativos:
 
 5.1: En caso de que el nombre del grupo ya existe, le pide al usuario ingresar un nombre distinto.
 
-<img src="bocetosui/Prototipo_Grupos.png" width="300"><img src="bocetosui/Prototipo_CrearGrupo.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Grupos.png" width="300"><img src="bocetosiu/Prototipo_CrearGrupo.png" width="300"><br>
 
 **UC #4**
 
@@ -549,7 +549,7 @@ Cursos alternativos:
 
 5.1: Si el resultado no es válido (tiene valores negativos o letras), se pide reingresar.
 
-<img src="bocetosui/Prototipo_PartidosParaPredecirpng" width="300"><img src="bocetosui/Prototipo_HacerPrediccion.png" width="300"><br>
+<img src="bocetosiu/Prototipo_PartidosParaPredecirpng" width="300"><img src="bocetosiu/Prototipo_HacerPrediccion.png" width="300"><br>
 
 **UC #5**
 
@@ -573,7 +573,7 @@ Cursos alternativos:
 
 5.1: Si el username seleccionado ya está en uso, se pide el ingreso de otro nuevo.
 
-<img src="bocetosui/Prototipo_Perfil.png" width="300"><img src="bocetosui/Prototipo_EditarPerfil.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Perfil.png" width="300"><img src="bocetosiu/Prototipo_EditarPerfil.png" width="300"><br>
 
 **UC #6**
 
@@ -596,7 +596,7 @@ Cursos alternativos:
 
 3.1: No hay partidos en curso, fin del caso de uso.
 
-<img src="bocetosui/Prototipo_Fixture.png" width="300"><img src="bocetosui/Prototipo_VerMinutoAMinuto.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Fixture.png" width="300"><img src="bocetosiu/Prototipo_VerMinutoAMinuto.png" width="300"><br>
 
 **UC #7**
 
@@ -625,7 +625,7 @@ Cursos alternativos:
 
 8.1: Si el grupo está lleno, no se agrega al invitado y se notifica del error.
 
-<img src="bocetosui/Prototipo_Grupos.png" width="300"><img src="bocetosui/Prototipo_DetallesGrupo.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Grupos.png" width="300"><img src="bocetosiu/Prototipo_DetallesGrupo.png" width="300"><br>
 
 **UC #8**
 
@@ -648,7 +648,7 @@ Cursos alternativos:
 
 3.1: Si el partido ya terminó, no se encontrará la opción para activar notificaciones.
 
-<img src="bocetosui/Prototipo_Fixture.png" width="300"><img src="bocetosui/Prototipo_Notificacion.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Fixture.png" width="300"><img src="bocetosiu/Prototipo_Notificacion.png" width="300"><br>
 
 **UC #9**
 
@@ -675,29 +675,29 @@ Cursos alternativos:
 ### Bocetos de IU
 
 - Pantalla inicial de la interfaz de usuario, contiene sponsors, próximos partidos y permite deslizar entre las noticias.
-<img src="bocetosui/Prototipo_Inicio.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Inicio.png" width="300"><br>
 - PopUp que aparece al seleccionar una noticia en la pantalla de inicio. Muestra toda la noticia, incluyendo las fuentes, información e imágenes.
-<img src="bocetosui/Prototipo_LeerNoticia.png" width="300"><br>
+<img src="bocetosiu/Prototipo_LeerNoticia.png" width="300"><br>
 - PopUp para crear noticia, Este tiene un campo de texto y un una opción para adjuntar imágenes. Solo los usuarios adminitradores poseen un botón en la pantalla de inicio para crear noticias. 
-<img src="bocetosui/Prototipo_CrearNoticia.png" width="300"><br>
+<img src="bocetosiu/Prototipo_CrearNoticia.png" width="300"><br>
 - Al seleccionar un partido se pueden ver los detalles del mismo (Si el partido aún no termina se mostrará los detalles obtenidos hasta el momento del partido). Para ir a esta pantalla se debe seleccionar el partido desde los cuadros para predecir o desde la pantalla del fixture.
-<img src="bocetosui/Prototipo_DetallesPartido.png" width="300"><img src="bocetosui/Prototipo_VerMinutoAMinuto.png" width="300"><br>
+<img src="bocetosiu/Prototipo_DetallesPartido.png" width="300"><img src="bocetosiu/Prototipo_VerMinutoAMinuto.png" width="300"><br>
 - Al seleccionar un partido, desde los cuadros para predecir o desde la pantalla del fixture. Yendo a la pestaña de “Predicciones”, se pueden realizar apuestas. 
-<img src="bocetosui/Prototipo_HacerPrediccion.png" width="300"><br>
+<img src="bocetosiu/Prototipo_HacerPrediccion.png" width="300"><br>
 - Seleccionar la opción de “Ver Más” de la pantalla de inicio, lleva a una lista de todas los partidos que se jugarán.
-<img src="bocetosui/Prototipo_PartidosParaPredecir.png" width="300"><br>
+<img src="bocetosiu/Prototipo_PartidosParaPredecir.png" width="300"><br>
 - La pantalla de Fixture lleva a una lista de los partidos que se jugarán, cada partido posee un boton que permite activar una notificación que alertará todo sobre el partido.
-<img src="bocetosui/Prototipo_Fixture.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Fixture.png" width="300"><br>
 - Pantalla de Perfil, muestra diferente información del usuario y sus puntos. Hay 2 botones extra para editar el perfil y otro para leer los términos y condiciones de la aplicación. Cabe destacar que el peso y la altura son datos no necesarios, que se agregaron solo para asemejarse más a una figurita del álbum del Qatar 2022 de Panini (decisión meramente estética).
-<img src="bocetosui/Prototipo_Perfil.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Perfil.png" width="300"><br>
 - PopUp para editar perfil, en este se puede configurar el nombre del usuario, fecha de nacimiento, equipo favorito y como añadido, el peso y la altura para asemejarse a una figurita del álbum del Qatar 2022 de Panini (decisión meramente estética).
-<img src="bocetosui/Prototipo_EditarPerfil.png" width="300"><br>
+<img src="bocetosiu/Prototipo_EditarPerfil.png" width="300"><br>
 - La pantalla de Grupos contiene grupos creados por los usuarios para poder realizar apuestas entre ellos. Esta pantalla también tiene filtros que ayudan a la búsqueda de estos grupos y una opción para crear tus propios grupos. 
-<img src="bocetosui/Prototipo_Grupos.png" width="300"><br>
+<img src="bocetosiu/Prototipo_Grupos.png" width="300"><br>
 - Pantalla para ver los detalles del grupo, estos muestran la Leaderboard y agrega un botón para invitar amigos. Para llegar a esta ventana se debe seleccionar un grupo desde la pantalla de grupos.
-<img src="bocetosui/Prototipo_DetallesGrupo.png" width="300"><br>
+<img src="bocetosiu/Prototipo_DetallesGrupo.png" width="300"><br>
 - PopUp para crear grupos, dentro de este se puede asignar un nombre al grupo y determinar la cantidad de participantes y si es público o privado.
-<img src="bocetosui/Prototipo_CrearGrupo.png" width="300"><br>
+<img src="bocetosiu/Prototipo_CrearGrupo.png" width="300"><br>
 
 ## Validación y verificación
 
