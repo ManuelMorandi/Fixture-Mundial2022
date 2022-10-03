@@ -164,7 +164,7 @@ Finalmente, en el aspecto estético, Guillermo recomendó un diseño minimalista
 
 ### Modelo conceptual del problema
 
-![UML](imagenes/uml.jpg)
+![UML](imagenes/UML.jpg)
 
 ## Especificación
 
@@ -822,7 +822,7 @@ No obstante, creemos que nos tomamos el trabajo con la seriedad y responsabilida
 
 Anexo1:
 
-[](https://education.github.com/git-cheat-sheet-education.pdf)
+[Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 Anexo2:
 
