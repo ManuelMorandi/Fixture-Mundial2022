@@ -210,8 +210,10 @@ Para definir la prioridad de cada requerimiento, nos basamos en la siguiente esc
     
 
 - RF3: Predicción de partidos
-Actor: Usuario
-Descripción: La posibilidad de competir por puntos prediciendo el resultado de los próximos partidos, tanto con conocidos (en grupos privados) como con desconocidos en (grupos públicos).
+
+    Actor: Usuario
+
+    Descripción: La posibilidad de competir por puntos prediciendo el resultado de los próximos partidos, tanto con conocidos (en grupos privados) como con desconocidos en (grupos públicos).
     
     Prioridad: Alta
     

@@ -7,11 +7,12 @@
 | Estudiantes: Tadeo Goday, Alfredo Fernandez, Manuel Morandi  |
 
 Lectura: 29-ago-2022
-Entrega 1: 03-oct-2022
 
-Code freeze: **FALTA_FECHA**
+Entrega: 03-oct-2022
 
-Entrega 2: 28-nov-2022
+Code freeze: 21-nov-2022
+
+Test otro proyecto: 28-nov-2022
 
 [Letra del proyecto](letra.md)
 
