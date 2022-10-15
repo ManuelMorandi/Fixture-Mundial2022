@@ -1,7 +1,7 @@
 @use "@material/theme" with (
-  $primary: #00bcd4,
-  $secondary: #f44336,
-  $background: #c7c7c7,
+  $primary: #003300,
+  $secondary: #0277bd,
+  $background: #4c8c4a,
 );
 @use '@material/button/mdc-button';
 @use '@material/button';
@@ -38,6 +38,7 @@ body {
 
 .app-bar {
   position: absolute;
+  bottom: 0;
 }
 
 .mdc-top-app-bar {
@@ -60,7 +61,7 @@ section {
 }
 
 .mdc-tab {
-    background-color: #67daff;
+    background-color: #1b5e20;
 }
 
 .mdc-tab__content .mdc-tab__text-label {
@@ -77,4 +78,14 @@ section {
 
 .mdc-snackbar__actions .mdc-button__label {
   color: #67daff;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }
