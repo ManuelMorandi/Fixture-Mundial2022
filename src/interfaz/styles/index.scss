@@ -65,7 +65,7 @@ section {
 }
 
 .mdc-tab__content .mdc-tab__text-label {
-    color: black;
+    color: #ffffff;
 }
 
 .mdc-text-field {
@@ -77,7 +77,11 @@ section {
 }
 
 .mdc-snackbar__actions .mdc-button__label {
-  color: #67daff;
+  color: #ffffff;
+}
+
+.mdc-tab__icon material-icons {
+	color: #ffffff;
 }
 
 .footer {
