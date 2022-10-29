@@ -8,11 +8,11 @@ export default class Grupo {
   }
 
   setMax(max){
-    if (max > 0){
+    if (max > 1){
       this.participantes = max;
     }
     else {
-      throw new Error('Tiene que haber por lo menos un participante en el grupo');
+      throw new Error('Tiene que haber por lo menos dos participantes en el grupo');
     }
   }
 }

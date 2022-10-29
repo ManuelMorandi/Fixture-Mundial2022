@@ -2,6 +2,7 @@ export default class Prediccion {
 
   // local,visitante :: int
   constructor(partido, local, visitante){
+    this.partido = partido;
     this.setLocal(local);
     this.setVis(visitante);
   }
@@ -25,5 +26,4 @@ export default class Prediccion {
         throw new Error('Los goles marcados deben ser un numero mayor a cero');
     }
   }
-
 }
