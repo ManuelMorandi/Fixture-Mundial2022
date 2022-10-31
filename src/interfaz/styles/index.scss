@@ -25,6 +25,8 @@
 @use "@material/checkbox"; // Required only for data table with row selection.
 @use "@material/icon-button"; // Required only for data table with column sorting.
 @use "@material/data-table/data-table";
+@use "../mixin";
+
 
 @include checkbox.core-styles;
 @include icon-button.core-styles;
@@ -88,6 +90,15 @@ section {
 
 .mdc-tab__icon material-icons {
 	color: #ffffff;
+}
+
+.my-card-content {
+  padding: 16px;
+}
+
+.my-card {
+  height: 350px;
+  width: 350px;
 }
 
 .footer {
