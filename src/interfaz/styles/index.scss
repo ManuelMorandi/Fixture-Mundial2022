@@ -6,6 +6,41 @@
 
 @include card.core-styles;
 
+body {
+    background-color: #1b5e20;
+    font-family: 'Roboto';
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    background-color: #003300;
+}
+
+.header {
+    position:absolute;
+    width: 100%;
+    padding: 10px;
+    margin: none;
+    left: 0;
+    top: 0;
+    text-align: left;
+    background-color: #003300;
+    color: white;
+    font-size: 30px;
+  }
+
+.margenes {
+    margin-top: 70px;
+}
+
+
+// edit de los web components
+
 .mdc-card-content {
     padding: 16px;
 }
@@ -16,11 +51,50 @@
     background: #0277bd;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
+.mdc-tab--active .mdc-tab__text-label {
+    color: #0277bd;
+    /* @alternate */
+    color: var(--mdc-theme-primary, #0277bd);
   }
+  .mdc-tab--active .mdc-tab__icon {
+    color: #0277bd;
+    /* @alternate */
+    color: var(--mdc-theme-primary, #0277bd);
+    fill: currentColor;
+  }
+
+  .mdc-tab--stacked:not(.mdc-tab--active) .mdc-tab__text-label {
+    padding-top: 6px;
+    padding-bottom: 4px;
+    color: #0277bd;
+    /* @alternate */
+    color: var(--mdc-theme-primary, #ffffff);
+    fill: currentColor;
+  }
+
+  .mdc-tab--stacked:not(.mdc-tab--active) .mdc-tab__icon {
+    padding-top: 6px;
+    padding-bottom: 4px;
+    color: #0277bd;
+    /* @alternate */
+    color: var(--mdc-theme-primary, #ffffff);
+    fill: currentColor;
+  }
+
+  .mdc-tab-indicator .mdc-tab-indicator__content--underline {
+    border-color: #0277bd;
+    /* @alternate */
+    border-color: var(--mdc-theme-primary, #0277bd);
+  }
+
+  .mdc-tab .mdc-tab__ripple::before, .mdc-tab .mdc-tab__ripple::after {
+    background-color: #004c8c;
+    /* @alternate */
+    background-color: var(--mdc-ripple-color, var(--mdc-theme-primary, #004c8c));
+  }
+  
+  .mdc-tab--stacked {
+    height: 72px;
+    color:#ffffff;
+  }
+

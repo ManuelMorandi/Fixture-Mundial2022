@@ -9,9 +9,10 @@
     <title>Mundial</title>
 </head>
 <body>
-    <h1>Prueba Mundial</h1>
+  
+    <div class="header">Prueba Mundial</div>
 
-    <div class="mdc-card">
+    <div class="mdc-card margenes" id="carta">
         <div class="mdc-card__primary-action" tabindex="0">
           <p style="text-align: center;">
             <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg" width="80px" heigh="80px;">
@@ -23,14 +24,109 @@
         Uruguay vs Corea
       </div>
 
+      <section id="grupos-tab">
+        <div id="income" class="tab-content active">
+          <div class="content">
+            <div class="content-top">
+              <div class="section-title">
+                Grupos
+              </div>
+              <div class="history-container">
+              </div>
+            </div>
+            <div class="content-bottom">
+              <span class="material-icons">
+                attach_money
+                </span>                
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="fixture-tab">
+        <div id="expense" class="tab-content">
+          <div class="content">
+            <div class="content-top">
+              <div class="section-title">
+                Fixture
+              </div>
+              <div class="history-container">
+              </div>
+            </div>
+            <div class="content-bottom">
+              <span class="material-icons">
+                money_off
+                </span>                
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="inicio-tab">
+        <div id="expense" class="tab-content">
+          <div class="content">
+            <div class="content-top">
+              <div class="section-title">
+                Menu de inicio
+              </div>
+              <div class="history-container">
+              </div>
+            </div>
+            <div class="content-bottom">
+              <span class="material-icons">
+                money_off
+                </span>                
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="perfil-tab">
+        <div id="expense" class="tab-content">
+          <div class="content">
+            <div class="content-top">
+              <div class="section-title">
+                Perfil del usuario
+              </div>
+              <div class="history-container">
+              </div>
+            </div>
+            <div class="content-bottom">
+              <span class="material-icons">
+                money_off
+                </span>                
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ajustes-tab">
+        <div id="expense" class="tab-content">
+          <div class="content">
+            <div class="content-top">
+              <div class="section-title">
+                Configuracion
+              </div>
+              <div class="history-container">
+              </div>
+            </div>
+            <div class="content-bottom">
+              <span class="material-icons">
+                money_off
+                </span>                
+            </div>
+          </div>
+        </div>
+      </section>
+
     <!-- Tabs inferiores -->
-    <div class="footer">
+    <div class="footer" id="tabMenu">
       <div class="mdc-tab-bar" role="tablist">
         <div class="mdc-tab-scroller">
           <div class="mdc-tab-scroller__scroll-area">
             <div class="mdc-tab-scroller__scroll-content">
                 <!--tab 1-->
-                <button role="tab" class="mdc-tab mdc-tab--stacked mdc-tab--active" aria-selected="true" tabindex="0">
+                <button role="tab" class="mdc-tab mdc-tab--stacked " aria-selected="true" tabindex="0">
                     <span class="mdc-tab__content">
                       <i aria-hidden="true" class="material-icons mdc-tab__icon"><!---->groups<!----></i>
                       <span class="mdc-tab__text-label"><!---->Grupos<!----></span>
@@ -43,7 +139,7 @@
 
   
               <!--tab 2-->
-              <button role="tab" class="mdc-tab mdc-tab--stacked mdc-tab--active" aria-selected="true" tabindex="0">
+              <button role="tab" class="mdc-tab mdc-tab--stacked " aria-selected="true" tabindex="0">
                 <span class="mdc-tab__content">
                   <i aria-hidden="true" class="material-icons mdc-tab__icon"><!---->calendar_month<!----></i>
                   <span class="mdc-tab__text-label"><!---->Fixure<!----></span>
@@ -55,7 +151,7 @@
               </button>
   
               <!--tab 3-->
-              <button role="tab" class="mdc-tab mdc-tab--stacked mdc-tab--active" aria-selected="true" tabindex="0">
+              <button role="tab" class="mdc-tab mdc-tab--stacked " aria-selected="true" tabindex="0">
                 <span class="mdc-tab__content">
                   <i aria-hidden="true" class="material-icons mdc-tab__icon"><!---->sports_soccer<!----></i>
                   <span class="mdc-tab__text-label"><!---->Inicio<!----></span>
@@ -67,7 +163,7 @@
               </button>
   
               <!--tab 4-->
-              <button role="tab" class="mdc-tab mdc-tab--stacked mdc-tab--active" aria-selected="true" tabindex="0">
+              <button role="tab" class="mdc-tab mdc-tab--stacked " aria-selected="true" tabindex="0">
                 <span class="mdc-tab__content">
                   <i aria-hidden="true" class="material-icons mdc-tab__icon"><!---->account_box<!----></i>
                   <span class="mdc-tab__text-label"><!---->Perfil<!----></span>
@@ -79,7 +175,7 @@
               </button>
   
               <!--tab 5-->
-              <button role="tab" class="mdc-tab mdc-tab--stacked mdc-tab--active" aria-selected="true" tabindex="0">
+              <button role="tab" class="mdc-tab mdc-tab--stacked " aria-selected="true" tabindex="0">
                 <span class="mdc-tab__content">
                   <i aria-hidden="true" class="material-icons mdc-tab__icon"><!---->settings<!----></i>
                   <span class="mdc-tab__text-label"><!---->Ajustes<!----></span>
@@ -95,5 +191,6 @@
       </div>
     </div>
 
+    <script src="./bundle.js"></script>
 </body>
 </html>
