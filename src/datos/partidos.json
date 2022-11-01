@@ -1,0 +1,148 @@
+{
+    "arrayPartidos":[
+        {
+            "id": 1,
+            "local":"Qatar",
+            "visitante":"Ecuador",
+            "fecha":"20/11",
+            "hora":13,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 2,
+            "local":"Inglaterra",
+            "visitante":"Iran",
+            "fecha":"21/11",
+            "hora":10,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 3,
+            "local":"Senegal",
+            "visitante":"PaisesBajos",
+            "fecha":"21/11",
+            "hora":13,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 4,
+            "local":"EstadosUnidos",
+            "visitante":"Gales",
+            "fecha":"21/11",
+            "hora":16,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 5,
+            "local":"Argentina",
+            "visitante":"ArabiaSaudita",
+            "fecha":"22/11",
+            "hora":7,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 6,
+            "local":"Dinamarca",
+            "visitante":"Tunez",
+            "fecha":"22/11",
+            "hora":10,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 7,
+            "local":"Mexico",
+            "visitante":"Polonia",
+            "fecha":"22/11",
+            "hora":13,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 8,
+            "local":"Francia",
+            "visitante":"Australia",
+            "fecha":"22/11",
+            "hora":16,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 9,
+            "local":"Marruecos",
+            "visitante":"Croacia",
+            "fecha":"23/11",
+            "hora":7,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 10,
+            "local":"Alemania",
+            "visitante":"Japon",
+            "fecha":"23/11",
+            "hora":10,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 11,
+            "local":"Espana",
+            "visitante":"CostaRica",
+            "fecha":"23/11",
+            "hora":13,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 12,
+            "local":"Belgica",
+            "visitante":"Canada",
+            "fecha":"23/11",
+            "hora":7,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 13,
+            "local":"Suiza",
+            "visitante":"Camerun",
+            "fecha":"24/11",
+            "hora":7,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 14,
+            "local":"Uruguay",
+            "visitante":"Corea",
+            "fecha":"24/11",
+            "hora":10,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 15,
+            "local":"Portugal",
+            "visitante":"Ghana",
+            "fecha":"24/11",
+            "hora":13,
+            "resLocal":-1,
+            "resVisitante":-1
+        },
+        {
+            "id": 16,
+            "local":"Brasil",
+            "visitante":"Serbia",
+            "fecha":"24/11",
+            "hora":16,
+            "resLocal":-1,
+            "resVisitante":-1
+        }
+    ]
+}
