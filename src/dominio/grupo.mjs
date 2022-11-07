@@ -7,6 +7,10 @@ export default class Grupo {
     this.privado = priv;
   }
 
+  /**
+   * 
+   * @param {*} max 
+   */
   setMax(max){
     if (max > 1){
       this.participantes = max;
