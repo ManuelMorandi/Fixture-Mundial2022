@@ -55,39 +55,5 @@ for(let i = 0; i < l.length; i++){
   }
   */
 
-let sis = new Sistema();
-/*
-let equipos = sis.getEquipos();
-$(document).ready(function ()
-{
-  let json = $.getJSON('../datos/datos.json', function(json)){
-    let datos = json.equipos;
-    for(i in datos)
-    {
-      equipos.push([datos[i].pais, datos[i].escudo]);
-    }
-  };
-});*/
-/*var json = [];
-fetch('../datos/datos.json').then(response => json = response.json())
-for(i in json)
-    {
-      console.log(json.arrayEquipos[i].pais)
-    }*/
-function readTextFile(file, callback) {
-  var XMLHttpRequest = require('xhr2');
-  var rawFile = new XMLHttpRequest();
-  rawFile.overrideMimeType("application/json");
-  rawFile.open("GET", file, true);
-  rawFile.onreadystatechange = function() {
-      if (rawFile.readyState === 4 && rawFile.status == "200") {
-          callback(rawFile.responseText);
-      }
-  }
-  rawFile.send(null);
-}
 
-readTextFile("../datos/datos.json", function(jsonText){
-  var obj = JSON.parse(jsonText);
-  console.log(obj);
-});
+

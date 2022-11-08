@@ -9,6 +9,11 @@ export default class Prediccion {
   // Hay que ver como relacionarlo con el partido en si
   // Capaz poner id de partido como atributo?
 
+  /**
+   * Pre: Recibe un int
+   * Pos: Si el int es mayor a 0, cambia local
+   * @param {*} goles tipo int
+   */
   setLocal(goles){
     if(goles >= 0){
       this.local = goles;
@@ -18,6 +23,11 @@ export default class Prediccion {
     }
   }
 
+  /**
+   * Pre: Recibe un int
+   * Pos: Si el int es mayor a 0, cambia visitante
+   * @param {*} goles tipo int
+   */
   setVis(goles){
     if(goles >= 0){
       this.visitante = goles;

@@ -1,3 +1,9 @@
+import Grupo from "../../dominio/grupo.mjs";
+import Equipo from "../../dominio/equipo.mjs";
+import Prediccion from "../../dominio/prediccion.mjs";
+import Partido from "../../dominio/partido.mjs";
+import Sistema from "../../dominio/sistema.mjs";
+
 import {MDCTabBar} from '@material/tab-bar';
 import {MDCRipple} from '@material/ripple';
 
@@ -54,3 +60,28 @@ tabBar.listen("MDCTabBar:activated", function(event) {
     document.getElementById("ajustes-tab").style.display="block";
   }
 });
+
+//Pruebas
+let sis = new Sistema();
+let uru = new Equipo("Uruguay","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg");
+let cor = new Equipo("Corea","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg");
+let par = new Partido(1,uru,cor,"24/11",10,-1,-1);
+
+let imageU = document.createElement("img"); //Aca tengo la foto
+imageU.src = uru.escudo; 
+imageU.width = "80"; 
+imageU.height = "80";
+
+let card = document.createElement('div');
+card.classList.add("mdc-card");
+let inter = document.createElement('div');
+inter.classList.add("mdc-card__primary-action");
+inter.tabIndex = "0";
+let rip = document.createElement('div');
+rip.classList.add("mdc-card__ripple");
+let p = document.createElement('p');
+p.appendChild(imageU);
+inter.appendChild(p);
+inter.appendChild(rip);
+card.appendChild(inter);
+document.getElementById("cartas").appendChild(card);

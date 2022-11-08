@@ -8,8 +8,9 @@ export default class Grupo {
   }
 
   /**
-   * 
-   * @param {*} max 
+   * Pre: Recibe un int
+   * Pos: Si el input es mayor a 0, cambia participantes
+   * @param {*} max de tipo int
    */
   setMax(max){
     if (max > 1){
