@@ -123,3 +123,25 @@ header{
     width: 100%;
     z-index: 4;
   }
+
+  .mdc-data-table {
+    background-color: #1b5e20;
+    width: 100%;
+  }
+  
+  .mdc-data-table__header-row {
+    background-color: #003300;
+    color: white;
+  }
+
+  .mdc-data-table__row {
+    background-color: #4c8c4a;
+    color: white;
+  }
+
+  .mdc-button {
+    background-color: #004c8c;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+  }

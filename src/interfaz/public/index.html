@@ -32,35 +32,39 @@
         <div id="income" class="tab-content active">
           <section id="grupos">
 
+            <button class="mdc-button mdc-button--raised mdc-button--leading">
+              <span class="mdc-button__ripple"></span>
+              <i class="material-icons mdc-button__icon" aria-hidden="true"
+                >add</i
+              >
+              <span class="mdc-button__label">Crear grupo</span>
+            </button>
+
             <div class="mdc-data-table">
               <div class="mdc-data-table__table-container">
-                <table class="mdc-data-table__table" aria-label="Dessert calories">
+                <table class="mdc-data-table__table" aria-label="tablaGrupos">
                   <thead>
                     <tr class="mdc-data-table__header-row">
-                      <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Dessert</th>
-                      <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Carbs (g)</th>
-                      <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Protein (g)</th>
-                      <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Comments</th>
+                      <th>Grupos</th>
+                      <th>Participantes</th>
+                      <th>Líder</th>
                     </tr>
                   </thead>
-                  <tbody class="mdc-data-table__content">
+                  <tbody class="mdc-data-table__content" id="bodyTabla">
                     <tr class="mdc-data-table__row">
-                      <th class="mdc-data-table__cell" scope="row">Frozen yogurt</th>
-                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
-                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
-                      <td class="mdc-data-table__cell">Super tasty</td>
+                      <th>Shawarma</th>
+                      <td>7/7</td>
+                      <td>Manuwu</td>
                     </tr>
                     <tr class="mdc-data-table__row">
-                      <th class="mdc-data-table__cell" scope="row">Ice cream sandwich</th>
-                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">37</td>
-                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.33333333333</td>
-                      <td class="mdc-data-table__cell">I like ice cream more</td>
+                      <th>Morbius Group</th>
+                      <td>1/100</td>
+                      <td>Tadeus</td>
                     </tr>
                     <tr class="mdc-data-table__row">
-                      <th class="mdc-data-table__cell" scope="row">Eclair</th>
-                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
-                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">6.0</td>
-                      <td class="mdc-data-table__cell">New filing flavor</td>
+                      <th>Fans de Messi</th>
+                      <td>+999/+999</td>
+                      <td>Alfred</td>
                     </tr>
                   </tbody>
                 </table>

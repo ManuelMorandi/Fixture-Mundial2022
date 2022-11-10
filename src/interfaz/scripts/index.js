@@ -4,20 +4,28 @@ import Prediccion from "../../dominio/prediccion.mjs";
 import Partido from "../../dominio/partido.mjs";
 import Sistema from "../../dominio/sistema.mjs";
 
-import {MDCTabBar} from '@material/tab-bar';
-import {MDCRipple} from '@material/ripple';
-
 document.getElementById("grupos-tab").style.display="none";
 document.getElementById("fixture-tab").style.display="none";
 document.getElementById("inicio-tab").style.display="block";
 document.getElementById("perfil-tab").style.display="none";
 document.getElementById("ajustes-tab").style.display="none";
 
-// cartas de partidos
+import {MDCTabBar} from '@material/tab-bar';
+import {MDCRipple} from '@material/ripple';
+
 const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
 const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
   return new MDCRipple(el);
 });
+
+import {MDCTopAppBar} from '@material/top-app-bar';
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+
+import {MDCDataTable} from '@material/data-table';
+const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));
+
+const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 
 // tabs inferiores
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
@@ -61,16 +69,12 @@ tabBar.listen("MDCTabBar:activated", function(event) {
   }
 });
 
-import {MDCTopAppBar} from '@material/top-app-bar';
-const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-const topAppBar = new MDCTopAppBar(topAppBarElement);
-
-//Pruebas
 let sis = new Sistema();
+
+// Creacion Cards
 let uru = new Equipo("Uruguay","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg");
 let cor = new Equipo("Corea","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg");
 let par = new Partido(1,uru,cor,"24/11",10,-1,-1);
-
 let imageU = document.createElement("img"); //Aca tengo la foto
 imageU.src = uru.escudo; 
 imageU.width = "80"; 
@@ -90,6 +94,21 @@ inter.appendChild(rip);
 card.appendChild(inter);
 document.getElementById("cartas").appendChild(card);
 
-// PARA LAS DATA TABLES (SE ROMPE)
-import {MDCDataTable} from '@material/data-table';
-const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));
+// Creacion Data Tables
+let gr = new Grupo("Prueba", 50, true);
+
+let h = document.createElement('th');
+let text1 = document.createTextNode(gr.nombre);
+h.appendChild(text1);
+let d1 = document.createElement('td');
+let text2 = document.createTextNode("1/"+gr.participantes);
+d1.appendChild(text2);
+let d2 = document.createElement('td');
+let text3 = document.createTextNode("USUARIO");
+d2.appendChild(text3);
+let r = document.createElement('tr');
+r.classList.add("mdc-data-table__row");
+r.appendChild(h);
+r.appendChild(d1);
+r.appendChild(d2);
+document.getElementById("bodyTabla").appendChild(r);
