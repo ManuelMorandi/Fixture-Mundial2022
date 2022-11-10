@@ -61,6 +61,10 @@ tabBar.listen("MDCTabBar:activated", function(event) {
   }
 });
 
+import {MDCTopAppBar} from '@material/top-app-bar';
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+
 //Pruebas
 let sis = new Sistema();
 let uru = new Equipo("Uruguay","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg");
@@ -85,3 +89,7 @@ inter.appendChild(p);
 inter.appendChild(rip);
 card.appendChild(inter);
 document.getElementById("cartas").appendChild(card);
+
+// PARA LAS DATA TABLES (SE ROMPE)
+import {MDCDataTable} from '@material/data-table';
+const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));

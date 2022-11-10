@@ -18,13 +18,17 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@material/banner": "^14.0.0",
     "@material/card": "^14.0.0",
+    "@material/data-table": "^14.0.0",
+    "@material/icon-button": "^14.0.0",
     "@material/tab-bar": "^14.0.0",
+    "@material/top-app-bar": "^14.0.0",
     "autoprefixer": "^10.4.13",
     "css-loader": "^6.7.1",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
-    "jsdocs": "^1.0.0",
+    "jsdocs": "^0.0.1",
     "postcss-loader": "^7.0.1",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",

@@ -3,7 +3,15 @@
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
 @use "@material/card";
+@use "@material/checkbox"; // Required only for data table with row selection.
+@use "@material/icon-button";
+@use "@material/icon-button/styles";
+@use "@material/data-table/data-table";
+@use "@material/top-app-bar/mdc-top-app-bar";
 
+@include checkbox.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
 @include card.core-styles;
 
 body {
@@ -21,21 +29,25 @@ body {
     background-color: #003300;
 }
 
-.header {
-    position:absolute;
-    width: 100%;
-    padding: 10px;
-    margin: none;
-    left: 0;
-    top: 0;
-    text-align: left;
-    background-color: #003300;
-    color: white;
-    font-size: 30px;
-  }
+header{
+  position: relative;
+  display: inline-block;
+  padding-top: 4rem;
+  width: 100%;
+  padding: 10px;
+  margin: none;
+  left: 0;
+  top: 0;
+  text-align: left;
+  background-color: #003300;
+  color: white;
+  font-size: 30px;
+}
 
-.margenes {
-    margin-top: 70px;
+.PanelNoticias {
+  position: relative;
+  background-color: #33002f;
+  overflow: scroll;
 }
 
 
@@ -98,3 +110,16 @@ body {
     color:#ffffff;
   }
 
+  .mdc-top-app-bar {
+    background-color: #003300;
+    /* @alternate */
+    background-color: var(--mdc-theme-primary, #003300);
+    color: white;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 4;
+  }
