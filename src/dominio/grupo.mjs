@@ -1,11 +1,12 @@
 export default class Grupo {
   
-  // nombre :: String, max, part :: int, priv :: bool
-  constructor(nombre, part, max, priv){
+  // nombre,lider :: String, max, part :: int, priv :: bool
+  constructor(nombre, part, max, priv, lider){
     this.nombre = nombre;
     this.setPart(part);
     this.setMax(max);
     this.privado = priv;
+    this.lider = lider;
   }
 
   /**

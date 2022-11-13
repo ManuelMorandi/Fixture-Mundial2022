@@ -49,6 +49,19 @@ export default class Sistema {
   getEquipos() {
     return this.equipos;
   }
+  /**
+   * Pre: Recibe un String
+   * Pos: Devuelve el Equipo de ese pais
+   * @param {} pais de tipo String 
+   * @returns El objeto Equipo de ese pais
+   */
+  devolverEquipo(pais){
+    for(let i = 0; i < this.getEquipos().length; i++){
+      if(this.getEquipos()[i].pais === (pais)){
+        return this.getEquipos()[i];
+      }
+    }
+  }
 
   /**
    * Pre: Recibe el partido que se desea agregar

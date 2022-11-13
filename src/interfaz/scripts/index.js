@@ -3,12 +3,14 @@ import Equipo from "../../dominio/equipo.mjs";
 import Prediccion from "../../dominio/prediccion.mjs";
 import Partido from "../../dominio/partido.mjs";
 import Sistema from "../../dominio/sistema.mjs";
+import * as idatos from "../../datos/insertarDatos.js";
 
 document.getElementById("grupos-tab").style.display="none";
 document.getElementById("fixture-tab").style.display="none";
 document.getElementById("inicio-tab").style.display="block";
 document.getElementById("perfil-tab").style.display="none";
 document.getElementById("ajustes-tab").style.display="none";
+document.getElementById("dialogo").style.display="none";
 
 import {MDCTabBar} from '@material/tab-bar';
 import {MDCRipple} from '@material/ripple';
@@ -26,6 +28,9 @@ import {MDCDataTable} from '@material/data-table';
 const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));
 
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+
+import {MDCDialog} from '@material/dialog';
+const dialog = new MDCDialog(document.querySelector('.mdc-dialog'));
 
 // tabs inferiores
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
@@ -71,21 +76,25 @@ tabBar.listen("MDCTabBar:activated", function(event) {
 
 let sis = new Sistema();
 
-window.addEventListener("load",gruposBase);
+window.addEventListener("load",datosPrecargados);
 
-function gruposBase(){
+function datosPrecargados(){
   document.getElementById("bodyTabla").innerHTML = "";
-  let g1 = new Grupo("Shawarma",7,7,true);
-  let g2 = new Grupo("Moribius Group",1,100,true);
-  let g3 = new Grupo("Fans de Messi",10568,30000,false);
+  let g1 = new Grupo("Shawarma",7,7,true,"Manuwu");
+  let g2 = new Grupo("Moribius Group",1,100,true,"Tadeus");
+  let g3 = new Grupo("Fans de Messi",10568,30000,false,"Alfred");
   sis.agregarGrupo(g1);
   sis.agregarGrupo(g2);
   sis.agregarGrupo(g3);
   cargarTabla();
+  idatos.insertarEquipos(sis);
+  idatos.insertarPartidos(sis);
+  cargarFixture();
 }
 
 function cargarTabla(){
-  let lista = sis.getGrupos;
+  document.getElementById("bodyTabla").innerHTML = "";
+  let lista = sis.getGrupos();
   for(let i = 0; i < lista.length; i++){
     let h = document.createElement('th');
     let text1 = document.createTextNode(lista[i].nombre);
@@ -94,31 +103,66 @@ function cargarTabla(){
     let text2 = document.createTextNode(lista[i].participantes + "/" + lista[i].maximo);
     d1.appendChild(text2);
     let d2 = document.createElement('td');
-    let text3 = document.createTextNode("USUARIO");
+    let text3 = document.createTextNode(lista[i].lider);
     d2.appendChild(text3);
     let r = document.createElement('tr');
     r.classList.add("mdc-data-table__row");
     r.appendChild(h);
-    r.appendChild(d1);
+    r.appendChild(d1); 
     r.appendChild(d2);
     document.getElementById("bodyTabla").appendChild(r);
   }
 }
 
-document.getElementById("botonGrupos").addEventListener("click",agregarGrupo);
+function cargarFixture(){
+  let lista = sis.getPartidos();
+  for(let i = 0; i < lista; i++){
+    let card = document.createElement('div');
+    card.classList.add("mdc-card-partido");
+    let inter = document.createElement('div');
+    inter.classList.add("mdc-card__primary-action");
+    inter.tabIndex = "0";
+    let rip = document.createElement('div');
+    rip.classList.add("mdc-card__ripple");
+    let p = document.createElement('p');
+    p.appendChild(imageU);
+    inter.appendChild(p);
+    inter.appendChild(rip);
+    card.appendChild(inter);
+    document.getElementById("partidos").appendChild(card);
+  }
+}
+
+document.getElementById("botonGrupos").addEventListener("click",desplegarDialogo);
+document.getElementById("cerrarDialogo").addEventListener("click",cerrarDialogo);
+document.getElementById("aceptarDialogo").addEventListener("click",agregarGrupo);
+
+function cerrarDialogo(){
+  document.getElementById("dialogo").style.display="none";
+}
+
+function desplegarDialogo(){
+  document.getElementById("dialogo").style.display="block";
+}
 
 function agregarGrupo(){
-  alert("YEPA");
+  let nombre, max, priv;
+  nombre = document.getElementById("nombreGrupo").value;
+  max = document.getElementById("maxGrupo").value;
+  let index = document.getElementById("grupoPrivPub").selectedIndex;
+  priv = (index == 0) ? true : false;
+  try {
+    let gr = new Grupo(nombre, 1, max, priv, "Javier Milán");
+    sis.agregarGrupo(gr);
+    cargarTabla();
+    cerrarDialogo();
+  }
+  catch(e){
+    alert("Valores inválidos: el nombre ya está en uso o la cantidad maxima de participantes no es válida.")
+  }
 }
 
 // Creacion Cards
-let uru = new Equipo("Uruguay","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg");
-let cor = new Equipo("Corea","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg");
-let par = new Partido(1,uru,cor,"24/11",10,-1,-1);
-let imageU = document.createElement("img"); //Aca tengo la foto
-imageU.src = uru.escudo; 
-imageU.width = "80"; 
-imageU.height = "80";
 
 /*
 let card = document.createElement('div');
@@ -135,22 +179,3 @@ inter.appendChild(rip);
 card.appendChild(inter);
 document.getElementById("cartas").appendChild(card);
 */
-
-// Creacion Data Tables
-let gr = new Grupo("Prueba", 50, true);
-
-let h = document.createElement('th');
-let text1 = document.createTextNode(gr.nombre);
-h.appendChild(text1);
-let d1 = document.createElement('td');
-let text2 = document.createTextNode("1/"+gr.participantes);
-d1.appendChild(text2);
-let d2 = document.createElement('td');
-let text3 = document.createTextNode("USUARIO");
-d2.appendChild(text3);
-let r = document.createElement('tr');
-r.classList.add("mdc-data-table__row");
-r.appendChild(h);
-r.appendChild(d1);
-r.appendChild(d2);
-document.getElementById("bodyTabla").appendChild(r);

@@ -9,8 +9,9 @@
 @use "@material/button/styles" as btn-style;
 @use "@material/data-table/data-table";
 @use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/dialog";
 
-
+@include dialog.core-styles;
 @include checkbox.core-styles;
 @include data-table.core-styles;
 @include data-table.theme-baseline;
@@ -91,6 +92,61 @@ header{
   }
 }
 
+.fixture-partido-equipos {
+  text-align: left;
+  width: 9vh;
+  height: 9vh;
+  display: flex;
+  margin-left: 9vw;
+
+  img {
+    margin-top: 1vh;
+    border-radius: 50px;
+  }
+
+  a.vs {
+    margin-top: 40%;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+}
+
+#btnLive {
+  background-color: red;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 10vw;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#btnHora {
+  background-color: #004c8c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 10vw;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#fecha {
+  color: white;
+  //float: right;
+  position: relative;
+  background-color: #003300;
+  border: 3px solid #003300;
+  border-radius: 10px;
+  padding: 5px;
+  display: block;
+}
 
 // edit de los web components
 
@@ -282,6 +338,16 @@ div.scrollmenu div:hover {
     z-index: 4;
   }
 
+  #puntos {
+    color: white;
+    float: right;
+    border: 3px solid #4c8c4a;
+    border-radius: 10px;
+    padding: 5px;
+    flex: left;
+    display: flex;
+  }
+
   .mdc-data-table {
     width: 100%;
     color: #fff;
@@ -442,6 +508,40 @@ div.scrollmenu div:hover {
       margin: auto;
       width: 100%;
       padding: 0px;
+    }
+    
+    .fixture-partido-equipos {
+      text-align: left;
+      width: 9vh;
+      height: 9vh;
+      display: flex;
+      margin-left: 15px;
+    
+      img {
+        margin-top: 1vh;
+        border-radius: 50px;
+      }
+    
+      a.vs {
+        margin-top: 40%;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 40%;
+        margin-right: 40%;
+      }
+
+    }
+    
+    #btnLive {
+      background-color: red;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin-left: 10vw;
+      padding-left: 10vw;
+      padding-right: 10vw;
     }
 
   }

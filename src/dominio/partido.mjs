@@ -1,6 +1,6 @@
 export default class Partido {
 
-  // id :: int, local,visitante :: Equipo, fecha :: Date, hora :: String, resLocal,resVisitante :: int
+  // id :: int, local,visitante, fecha, hora :: String, resLocal,resVisitante :: int
   constructor(id, local, visitante, fecha, hora, resLocal, resVisitante){
     this.id = id;
     this.local = local;

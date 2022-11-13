@@ -37,16 +37,18 @@
   <main class="mdc-top-app-bar--fixed-adjust">
     <br>
 
-      <section id="grupos-tab">
+      <section id="grupos-tab" style="display: none;">
         <div id="income" class="tab-content active">
           <section id="grupos">
-
+            
             <button class="mdc-button mdc-button--raised mdc-button--leading" id="botonGrupos">
               <span class="mdc-button__ripple"></span>
               <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
               <span class="mdc-button__label">Crear grupo</span>
             </button>
-          
+
+            <a id="puntos" >Tus puntos: 86</a>
+
             <br><br>
 
             <div class="mdc-data-table">
@@ -60,35 +62,98 @@
                     </tr>
                   </thead>
                   <tbody class="mdc-data-table__content" id="bodyTabla">
-                    <tr class="mdc-data-table__row">
-                      <th>Shawarma</th>
-                      <td>7/7</td>
-                      <td>Manuwu</td>
-                    </tr>
-                    <tr class="mdc-data-table__row">
-                      <th>Morbius Group</th>
-                      <td>1/100</td>
-                      <td>Tadeus</td>
-                    </tr>
-                    <tr class="mdc-data-table__row">
-                      <th>Fans de Messi</th>
-                      <td>+999/+999</td>
-                      <td>Alfred</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
+            </div>
+
+            <div class="mdc-dialog mdc-dialog--open mdc-dialog--fullscreen" id="dialogo" style="display: none;">
+              <div class="mdc-dialog__container">
+                <div class="mdc-dialog__surface"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="my-dialog-title"
+                  aria-describedby="my-dialog-content">
+                  <div class="mdc-dialog__header">
+                    <h1 class="mdc-dialog__title" id="my-dialog-title">
+                      Crear grupo
+                    </h1>
+                    <button class="mdc-icon-button material-icons mdc-dialog__close"
+                            data-mdc-dialog-action="close" id="cerrarDialogo">
+                      close
+                    </button>
+                  </div>
+                  <div class="mdc-dialog__content">
+                    <p>Ingrese nombre del grupo:</p>
+                    <input type="text" id="nombreGrupo" placeholder="Nombre" maxlength=20 required>
+                    <br>
+                    <p>Ingrese máximo de participantes:</p>
+                    <input type="number" id="maxGrupo" min=2 required>
+                    <br><br>
+                    <select id="grupoPrivPub">
+                      <option value="Privado" selected>Privado</option>
+                      <option value="Publico">Público</option>
+                    </select>
+                  </div>
+                  <div class="mdc-dialog__actions">
+                    <button type="button" class="mdc-button mdc-dialog__button"
+                            data-mdc-dialog-action="ok" id="aceptarDialogo">
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">OK</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mdc-dialog__scrim"></div>
             </div>
 
           </section>
         </div>
       </section>
       
-      <section id="fixture-tab">
-        <div class="center2">
-          <div class="mdc-card-partido"></div>
-          <div class="mdc-card-partido"></div>
-          <div class="mdc-card-partido"></div>
+      <section id="fixture-tab" style="display: none;">
+        <div id="partidos" class="center2">
+
+          <a id="fecha">Hoy, 24 nov</a>
+          <div class="mdc-card-partido">
+            <div class="fixture-partido-equipos">
+                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg">
+                <a class="vs">vs</a>
+                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg">
+                <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnLive">
+                  <span class="mdc-button__ripple"></span>
+                  <i class="material-icons mdc-button__icon" aria-hidden="true">radio_button_checked</i>
+                  <span class="mdc-button__label">Live</span>
+                </button>
+            </div>
+          </div>
+
+          <div class="mdc-card-partido">
+            <div class="fixture-partido-equipos">
+                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg">
+                <a class="vs">vs</a>
+                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg">
+                <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnHora">
+                  <span class="mdc-button__ripple"></span>
+                  <i class="material-icons mdc-button__icon" aria-hidden="true">notifications</i>
+                  <span class="mdc-button__label">10:00</span>
+                </button>
+            </div>
+          </div>
+
+          <div class="mdc-card-partido">
+            <div class="fixture-partido-equipos">
+                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg">
+                <a class="vs">vs</a>
+                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg">
+                <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnHora">
+                  <span class="mdc-button__ripple"></span>
+                  <i class="material-icons mdc-button__icon" aria-hidden="true">notifications</i>
+                  <span class="mdc-button__label">23:30</span>
+                </button>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -148,7 +213,7 @@
           </div>
       </section>
 
-      <section id="perfil-tab">
+      <section id="perfil-tab" style="display: none;">
         <div id="expense" class="tab-content">
           <div class="content">
             <div class="content-top">
@@ -164,7 +229,7 @@
         </div>
       </section>
 
-      <section id="ajustes-tab">
+      <section id="ajustes-tab" style="display: none;">
         <div id="expense" class="tab-content">
           <div class="content">
             <div class="content-top">
