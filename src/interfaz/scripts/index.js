@@ -71,6 +71,46 @@ tabBar.listen("MDCTabBar:activated", function(event) {
 
 let sis = new Sistema();
 
+window.addEventListener("load",gruposBase);
+
+function gruposBase(){
+  document.getElementById("bodyTabla").innerHTML = "";
+  let g1 = new Grupo("Shawarma",7,7,true);
+  let g2 = new Grupo("Moribius Group",1,100,true);
+  let g3 = new Grupo("Fans de Messi",10568,30000,false);
+  sis.agregarGrupo(g1);
+  sis.agregarGrupo(g2);
+  sis.agregarGrupo(g3);
+  cargarTabla();
+}
+
+function cargarTabla(){
+  let lista = sis.getGrupos;
+  for(let i = 0; i < lista.length; i++){
+    let h = document.createElement('th');
+    let text1 = document.createTextNode(lista[i].nombre);
+    h.appendChild(text1);
+    let d1 = document.createElement('td');
+    let text2 = document.createTextNode(lista[i].participantes + "/" + lista[i].maximo);
+    d1.appendChild(text2);
+    let d2 = document.createElement('td');
+    let text3 = document.createTextNode("USUARIO");
+    d2.appendChild(text3);
+    let r = document.createElement('tr');
+    r.classList.add("mdc-data-table__row");
+    r.appendChild(h);
+    r.appendChild(d1);
+    r.appendChild(d2);
+    document.getElementById("bodyTabla").appendChild(r);
+  }
+}
+
+document.getElementById("botonGrupos").addEventListener("click",agregarGrupo);
+
+function agregarGrupo(){
+  alert("YEPA");
+}
+
 // Creacion Cards
 let uru = new Equipo("Uruguay","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg");
 let cor = new Equipo("Corea","https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg");
