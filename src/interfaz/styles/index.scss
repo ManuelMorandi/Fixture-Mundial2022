@@ -55,6 +55,12 @@ header{
   justify-content: center;
 }
 
+.center2 {
+  margin: auto;
+  width: 50%;
+  padding: 0px;
+}
+
 .contornoPerfil {
   width: 410px;
   height: 600px;
@@ -105,6 +111,19 @@ header{
       inset 0 -3em 3em rgba(0,0,0,0.1),
       0 0  0 2px rgba(255, 255, 255, 0),
       0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.mdc-card-partido {
+  width: 99%;
+  height: 10vh;
+  background: #0277bd;
+  border-radius: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.1),
+    0 0  0 2px rgba(255, 255, 255, 0),
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
 .mdc-card-noticias {
@@ -312,7 +331,7 @@ div.scrollmenu div:hover {
 
   // Responsive:
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     .mdc-card-noticias {
       height: 200px;
       width: 300px;
@@ -405,4 +424,24 @@ div.scrollmenu div:hover {
         border-radius: 15px;
       }
     }
+
+    .mdc-card-partido {
+      width: 97%;
+      height: 10vh;
+      background: #0277bd;
+      border-radius: 5px;
+      margin: 5px;
+      margin-bottom: 10px;
+      box-shadow:
+        inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 2px rgba(255, 255, 255, 0),
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+
+    .center2 {
+      margin: auto;
+      width: 100%;
+      padding: 0px;
+    }
+
   }
