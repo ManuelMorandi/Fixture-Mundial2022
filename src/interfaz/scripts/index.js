@@ -80,6 +80,7 @@ imageU.src = uru.escudo;
 imageU.width = "80"; 
 imageU.height = "80";
 
+/*
 let card = document.createElement('div');
 card.classList.add("mdc-card");
 let inter = document.createElement('div');
@@ -93,6 +94,7 @@ inter.appendChild(p);
 inter.appendChild(rip);
 card.appendChild(inter);
 document.getElementById("cartas").appendChild(card);
+*/
 
 // Creacion Data Tables
 let gr = new Grupo("Prueba", 50, true);
