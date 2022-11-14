@@ -111,13 +111,23 @@ function cargarTabla(){
     r.appendChild(d1); 
     r.appendChild(d2);
     document.getElementById("bodyTabla").appendChild(r);
+
   }
 }
 
 function cargarFixture(){
   let lista = sis.getPartidos();
-
+  let fecha = lista[0].fecha;
   for(let i = 1; i < lista.length; i++){
+    if(fecha != lista[i].fecha){
+      let a = document.createElement('a');
+      a.classList.add("fecha");
+      let fec = document.createTextNode(lista[i].fecha);
+      a.appendChild(fec);
+      document.getElementById("partidos").appendChild(a);
+      fecha = lista[i].fecha;
+    }
+
     let card = document.createElement('div');
     card.classList.add("mdc-card-partido");
     let inter = document.createElement('div');
@@ -181,6 +191,8 @@ function agregarGrupo(){
     let gr = new Grupo(nombre, 1, max, priv, "Javier Milán");
     sis.agregarGrupo(gr);
     cargarTabla();
+    document.getElementById("nombreGrupo").value = "";
+    document.getElementById("maxGrupo").value = "";
     cerrarDialogo();
   }
   catch(e){

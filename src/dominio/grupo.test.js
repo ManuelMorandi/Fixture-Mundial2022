@@ -1,6 +1,10 @@
-const setMax = require('./setMax');
+import Grupo from './grupo.mjs'
 
-test('Si se ingresa un valor mayor a 0 cambia participantes', () => {
-  expect(setMax(0)).toBe('Tiene que haber por lo menos dos participantes en el grupo');
-  expect(setMax(1)).toBe(this.participantes == 1);
+test('creación de un grupo', () => {
+  let unGrupo = new Grupo("Grupo1", 10, 15, true, "manuwu");
+  expect(unGrupo.nombre).toBe("Grupo1");
+  expect(unGrupo.part).toBe(10);
+  expect(unGrupo.max).toBe(15);
+  expect(unGrupo.priv).toBe(true);
+  expect(unGrupo.lider).toBe(manuwu);
 });

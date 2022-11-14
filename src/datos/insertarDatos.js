@@ -70,36 +70,36 @@ export function insertarEquipos(sis){
 }
 
 export function insertarPartidos(sis){ 
-    let e = new Partido(1,"Qatar","Ecuador","20/11",13,-1,-1);
+    let e = new Partido(1,"Qatar","Ecuador","HOY, 20/11","13:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(2,"Inglaterra","Iran","21/11",13,-1,-1);
+    e = new Partido(2,"Inglaterra","Iran","LUN, 21 nov","10:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(3,"Senegal","PaisesBajos","21/11",13,-1,-1);
+    e = new Partido(3,"Senegal","PaisesBajos","LUN, 21 nov","13:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(4,"EstadosUnidos","Gales","21/11",16,-1,-1);
+    e = new Partido(4,"EstadosUnidos","Gales","LUN, 21 nov","16:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(5,"Argentina","ArabiaSaudita","22/11",7,-1,-1);
+    e = new Partido(5,"Argentina","ArabiaSaudita","MAR, 22 nov","07:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(6,"Dinamarca","Tunez","22/11",10,-1,-1);
+    e = new Partido(6,"Dinamarca","Tunez","MAR, 22 nov","10:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(7,"Mexico","Polonia","22/11",13,-1,-1);
+    e = new Partido(7,"Mexico","Polonia","MAR, 22 nov","13:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(8,"Francia","Australia","22/11",16,-1,-1);
+    e = new Partido(8,"Francia","Australia","MAR, 22 nov","16:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(9,"Marruecos","Croacia","23/11",7,-1,-1);
+    e = new Partido(9,"Marruecos","Croacia","MIE, 23 nov","07:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(10,"Alemania","Japon","23/11",10,-1,-1);
+    e = new Partido(10,"Alemania","Japon","MIE, 23 nov","10:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(11,"Espana","CostaRica","23/11",13,-1,-1);
+    e = new Partido(11,"Espana","CostaRica","MIE, 23 nov","13:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(12,"Belgica","Canada","23/11",7,-1,-1);
+    e = new Partido(12,"Belgica","Canada","MIE, 23 nov","16:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(13,"Suiza","Camerun","24/11",7,-1,-1);
+    e = new Partido(13,"Suiza","Camerun","JUE, 24 nov","07:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(14,"Uruguay","Corea","24/11",10,-1,-1);
+    e = new Partido(14,"Uruguay","Corea","JUE, 24 nov","10:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(15,"Portugal","Ghana","24/11",13,-1,-1);
+    e = new Partido(15,"Portugal","Ghana","JUE, 24 nov","13:00",-1,-1);
     sis.agregarPartido(e);
-    e = new Partido(16,"Brasil","Serbia","24/11",16,-1,-1);
+    e = new Partido(16,"Brasil","Serbia","JUE, 24 nov","16:00",-1,-1);
     sis.agregarPartido(e);
 }
