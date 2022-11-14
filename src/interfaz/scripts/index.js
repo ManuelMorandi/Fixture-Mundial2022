@@ -116,18 +116,44 @@ function cargarTabla(){
 
 function cargarFixture(){
   let lista = sis.getPartidos();
-  for(let i = 0; i < lista; i++){
+
+  for(let i = 1; i < lista.length; i++){
     let card = document.createElement('div');
     card.classList.add("mdc-card-partido");
     let inter = document.createElement('div');
-    inter.classList.add("mdc-card__primary-action");
-    inter.tabIndex = "0";
-    let rip = document.createElement('div');
-    rip.classList.add("mdc-card__ripple");
-    let p = document.createElement('p');
-    p.appendChild(imageU);
-    inter.appendChild(p);
-    inter.appendChild(rip);
+    inter.classList.add("fixture-partido-equipos");
+    let im1 = document.createElement('img');
+    im1.src = sis.devolverEquipo(lista[i].local).escudo;
+    let a = document.createElement('a');
+    let vs = document.createTextNode("vs");
+    a.classList.add("vs");
+    a.appendChild(vs);
+    let im2 = document.createElement('img');
+    im2.src = sis.devolverEquipo(lista[i].visitante).escudo;
+    let bot = document.createElement('button');
+    bot.classList.add("mdc-button");
+    bot.classList.add("mdc-button--raised");
+    bot.classList.add("mdc-button--leading");
+    bot.id = "btnHora";
+    let rip = document.createElement('span');
+    rip.classList.add("mdc-button__ripple");
+    let ielem = document.createElement('i');
+    ielem.classList.add("material-icons");
+    ielem.classList.add("mdc-button__icon");
+    ielem.setAttribute("aria-hidden", "true");
+    let check = document.createTextNode("notifications");
+    ielem.appendChild(check);
+    let span = document.createElement('span');
+    span.classList.add("mdc-button__label");
+    let live = document.createTextNode(lista[i].hora);
+    span.appendChild(live);
+    bot.appendChild(rip);
+    bot.appendChild(ielem);
+    bot.appendChild(span);
+    inter.appendChild(im1);
+    inter.appendChild(a);
+    inter.appendChild(im2);
+    inter.appendChild(bot);
     card.appendChild(inter);
     document.getElementById("partidos").appendChild(card);
   }
