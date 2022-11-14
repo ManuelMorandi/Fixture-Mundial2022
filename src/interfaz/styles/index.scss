@@ -63,17 +63,13 @@ header{
 }
 
 .center3 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-self: center;
+  
 }
 
 .cards-de-a-2 {
   margin: 0;
+  display: flex;
+  flex: left;
 }
 
 .contornoPerfil {
@@ -125,6 +121,40 @@ header{
     margin-left: 50%;
     margin-right: 50%;
   }
+}
+
+.carta-partido-equipos {
+  text-align: left;
+  width: 9vh;
+  height: 9vh;
+  display: flex;
+  margin-left: 1.3vw;
+  margin-top: 4vw;
+
+  img {
+    border-radius: 50px;
+  }
+
+  a.vs {
+    margin-top: 40%;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+}
+
+#btnHorario {
+  float: right;
+  background-color: #58a5f0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 1vw;
 }
 
 #btnLive {
@@ -181,6 +211,11 @@ header{
       inset 0 -3em 3em rgba(0,0,0,0.1),
       0 0  0 2px rgba(255, 255, 255, 0),
       0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+    h1 {
+      margin-left: 1vw;
+      color: #fff;
+    }
 }
 
 .mdc-card-partido {
@@ -246,6 +281,29 @@ header{
 }
 
 div.scrollmenu {
+  //background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  align-items: center;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+div.scrollmenu2 {
+  display: flex;
+
+
   //background-color: #333;
   overflow: auto;
   white-space: nowrap;
@@ -574,6 +632,10 @@ div.scrollmenu div:hover {
       margin-left: 10vw;
       padding-left: 10vw;
       padding-right: 10vw;
+    }
+
+    div.scrollmenu2 {
+      display: block;
     }
 
   }

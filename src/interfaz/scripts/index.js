@@ -81,7 +81,7 @@ window.addEventListener("load",datosPrecargados);
 function datosPrecargados(){
   document.getElementById("bodyTabla").innerHTML = "";
   let g1 = new Grupo("Shawarma",7,7,true,"Manuwu");
-  let g2 = new Grupo("Moribius Group",1,100,true,"Tadeus");
+  let g2 = new Grupo("Morbius Group",1,100,true,"Tadeus");
   let g3 = new Grupo("Fans de Messi",10568,30000,false,"Alfred");
   sis.agregarGrupo(g1);
   sis.agregarGrupo(g2);
@@ -172,6 +172,11 @@ function cargarFixture(){
 document.getElementById("botonGrupos").addEventListener("click",desplegarDialogo);
 document.getElementById("cerrarDialogo").addEventListener("click",cerrarDialogo);
 document.getElementById("aceptarDialogo").addEventListener("click",agregarGrupo);
+
+document.getElementById("carta1"). addEventListener("click",prueba);
+function prueba(){
+  alert("YEPA");
+}
 
 function cerrarDialogo(){
   document.getElementById("dialogo").style.display="none";
