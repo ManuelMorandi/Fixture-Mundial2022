@@ -147,14 +147,19 @@ header{
 #btnHorario {
   float: right;
   background-color: #58a5f0;
-  border-radius: 20px;
+  border-radius: 0px 20px 0px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 1vw;
+  width: 30%;
+  font-size: 70%;
+  //margin-right: 5%;
+  //margin-top: 5%;
+  i {
+    //padding-left: 5;
+    align-self: center;
+  }
 }
 
 #btnLive {
@@ -215,6 +220,19 @@ header{
     h1 {
       margin-left: 1vw;
       color: #fff;
+      font-size: 100%;
+      width: 50%;
+      float: left;
+    }
+
+    h3 {
+      margin-top: 10%;
+      color: #fff;
+      text-align: center; 
+    }
+    h2 {
+      color: #fff;
+      text-align: center; 
     }
 }
 
@@ -496,21 +514,6 @@ div.scrollmenu div:hover {
         border-radius: 15px;
       }
     }
-  
-    .mdc-card {
-      height: 45vw;
-      width: 45vw;
-      background: #0277bd;
-      flex: 0 0 auto;
-      border-radius: 15px;
-      display: inline-block;
-      margin: 1.5vw;
-      float: left;
-      box-shadow:
-         inset 0 -5px 5px rgba(0,0,0,0.1),
-               0 0  0 3px rgba(255, 255, 255, 0),
-               3px 3px 3px rgba(0,0,0,0.3);
-    }
 
     .mdc-card-sponsor {
       display: none;
@@ -637,5 +640,59 @@ div.scrollmenu div:hover {
     div.scrollmenu2 {
       display: block;
     }
+
+    .mdc-card {
+      height: 45vw;
+      width: 45vw;
+      background: #0277bd;
+      flex: 0 0 auto;
+      border-radius: 15px;
+      display: inline-block;
+      margin: 1.5vw;
+      float: left;
+      box-shadow:
+         inset 0 -5px 5px rgba(0,0,0,0.1),
+               0 0  0 3px rgba(255, 255, 255, 0),
+               3px 3px 3px rgba(0,0,0,0.3);
+  
+      h1 {
+        margin-left: 1vw;
+        color: #fff;
+        font-size: 100%;
+        width: 50%;
+        float: left;
+      }
+  
+      h3 {
+        margin-top: 10%;
+        color: #fff;
+        text-align: center; 
+      }
+      h2 {
+        color: #fff;
+        text-align: center; 
+      }
+
+  }
+
+  .carta-partido-equipos {
+    text-align: left;
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    margin-top: 5vw;
+    margin-left: 0%;
+    img {
+      border-radius: 50px;
+    }
+  
+    a.vs {
+      margin-top: 40%;
+      color: #fff;
+      font-size: 20px;
+      margin-left: 50%;
+      margin-right: 50%;
+    }
+  }
 
   }

@@ -1,5 +1,8 @@
 export default class Sistema {
 
+  /**
+   * Crea un objeto de la clase Sistema
+   */
   constructor() {
     this.grupos = [];
     this.equipos = [];
@@ -7,9 +10,9 @@ export default class Sistema {
     this.predicciones = [];
   }
     /**
-     * Pre: Recibe un grupo que se desea agregar
-     * Pos: Si el nombre no esta en uso, lo agrega a la lista de grupos existentes
-     * @param {*} grupo de tipo Grupo
+     * VER BIEN EL TEMA DE JSDOCS
+     * LUEGO GENERAMOS HTML CORRIENDO jsdocs <nombreArchivo>
+     * @param {Object} grupo de tipo Grupo
      */
   agregarGrupo(grupo) {
     let esta = this.grupos.some(m => m.nombre == grupo.nombre);
@@ -22,7 +25,7 @@ export default class Sistema {
   /**
    * Pre: -
    * Pos: Devuelve la lista de grupos existentes
-   * @returns Array de elementos tipo Grupo
+   * @returns {Array} Array de elementos tipo Grupo
    */
   getGrupos() {
     return this.grupos;
