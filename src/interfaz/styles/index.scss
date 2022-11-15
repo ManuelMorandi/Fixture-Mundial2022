@@ -125,8 +125,8 @@ header{
 
 .carta-partido-equipos {
   text-align: left;
-  width: 9vh;
-  height: 9vh;
+  width: 9vw;
+  height: 9vw;
   display: flex;
   margin-left: 1.3vw;
   margin-top: 4vw;
@@ -144,10 +144,50 @@ header{
   }
 }
 
+.carta-partido-equipos {
+  width: 100%;
+  height: 30%;
+  padding-top: 0%;
+  padding-left: 5%;
+  
+  img {
+    width: 30%;
+    height: 100%;
+    border-radius: 30px;
+  }
+
+  a.vs {
+    margin-top: 10%;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+}
+
 #btnHorario {
   float: right;
   background-color: #58a5f0;
-  border-radius: 0px 20px 0px 20px;
+  border-radius: 0px 15px 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 30%;
+  font-size: 70%;
+  //margin-right: 5%;
+  //margin-top: 5%;
+  i {
+    //padding-left: 5;
+    align-self: center;
+  }
+}
+
+#btnHorarioLive {
+  float: right;
+  background-color: red;
+  border-radius: 0px 15px 0px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,14 +263,17 @@ header{
       font-size: 100%;
       width: 50%;
       float: left;
+      margin-bottom: 5%;
     }
 
     h3 {
-      margin-top: 10%;
+      margin-top: 5%;
+      margin-bottom: 5%;
       color: #fff;
       text-align: center; 
     }
     h2 {
+      margin-top: 0%;
       color: #fff;
       text-align: center; 
     }
@@ -664,35 +707,39 @@ div.scrollmenu div:hover {
       }
   
       h3 {
-        margin-top: 10%;
+        margin-top: 5%;
+        margin-bottom: 0%;
         color: #fff;
         text-align: center; 
       }
       h2 {
+        margin-top: 0%;
         color: #fff;
         text-align: center; 
       }
 
-  }
+    }
 
-  .carta-partido-equipos {
-    text-align: left;
-    width: 8vh;
-    height: 8vh;
-    display: flex;
-    margin-top: 5vw;
-    margin-left: 0%;
-    img {
-      border-radius: 50px;
+    .carta-partido-equipos {
+      width: 100%;
+      height: 30%;
+      padding-top: 0%;
+      padding-left: 5%;
+      
+      img {
+        width: 30%;
+        height: 100%;
+        border-radius: 30px;
+      }
+    
+      a.vs {
+        margin-top: 10%;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      
     }
-  
-    a.vs {
-      margin-top: 40%;
-      color: #fff;
-      font-size: 20px;
-      margin-left: 50%;
-      margin-right: 50%;
-    }
-  }
 
   }
