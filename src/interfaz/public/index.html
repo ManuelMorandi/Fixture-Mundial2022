@@ -128,34 +128,6 @@
             </div>
           </div>
 
-<!--
-          <div class="mdc-card-partido">
-            <div class="fixture-partido-equipos">
-                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg">
-                <a class="vs">vs</a>
-                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg">
-                <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnHora">
-                  <span class="mdc-button__ripple"></span>
-                  <i class="material-icons mdc-button__icon" aria-hidden="true">notifications</i>
-                  <span class="mdc-button__label">10:00</span>
-                </button>
-            </div>
-          </div>
-
-          <div class="mdc-card-partido">
-            <div class="fixture-partido-equipos">
-                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/uruguay.jpg">
-                <a class="vs">vs</a>
-                <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/coreadelsur.jpg">
-                <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnHora">
-                  <span class="mdc-button__ripple"></span>
-                  <i class="material-icons mdc-button__icon" aria-hidden="true">notifications</i>
-                  <span class="mdc-button__label">23:30</span>
-                </button>
-            </div>
-          </div>
--->
-
         </div>
         <br><br><br><br><br>
       </section>
@@ -198,7 +170,7 @@
           <div class="center3">
           <div id="Predicciones_" class="scrollmenu2">
           
-            <div class="cards-de-a-2" id="1">
+            <div class="cards-de-a-2" id="0">
               <div class="mdc-card" id="predict-1">
                 <h1>LUN, 21 Nov</h1>
                 <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnHorarioLive">
@@ -212,7 +184,7 @@
                   <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/ecuador.jpg">
                 </div>
                 <h3>Tu Predicción:</h3>
-                <h2>0 - 0</h2>
+                <h2>? - ?</h2>
               </div>
 
               <div class="mdc-card" id="predict-2">
@@ -228,12 +200,48 @@
                   <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/iran.jpg">
                 </div>
                 <h3>Tu Predicción:</h3>
-                <h2>0 - 0</h2>
+                <h2>? - ?</h2>
               </div>
             </div>
           </div>
           </div>
 
+          <div class="mdc-dialog mdc-dialog--open mdc-dialog" id="predict" style="display: none;">
+            <div class="mdc-dialog__container">
+              <div class="mdc-dialog__surface"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="my-dialog-title"
+                aria-describedby="my-dialog-content">
+                <div class="mdc-dialog__header">
+                  <h1 class="mdc-dialog__title" id="my-dialog-title">
+                    Ingresar predicción
+                    <button class="mdc-icon-button material-icons mdc-dialog__close"
+                          data-mdc-dialog-action="close" id="cerrarPrediccion">
+                    close
+                    </button>
+                  </h1>
+                </div>
+                <div class="mdc-dialog__content">
+                  <p id="localPred">Local</p>
+                  <input type="number" id="golLocal" min=0 required value="0">
+                  <br>
+                  <p id="visPred">Visitante</p>
+                  <input type="number" id="golVis" min=0 required value="0">
+                  <br><br>
+                </div>
+                <div class="mdc-dialog__actions">
+                  <button type="button" class="mdc-button mdc-dialog__button"
+                          data-mdc-dialog-action="ok" id="aceptarPrediccion">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">OK</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-dialog__scrim"></div>
+          </div>
+          
           <br><br><br><br><br>
       </section>
 

@@ -93,6 +93,25 @@ function datosPrecargados(){
 
   cargarFixture();
   cargarCartasConPredicciones();
+
+  document.getElementById("botonGrupos").addEventListener("click",desplegarDialogo);
+  document.getElementById("cerrarDialogo").addEventListener("click",cerrarDialogo);
+  document.getElementById("aceptarDialogo").addEventListener("click",agregarGrupo);
+  document.getElementById("cerrarPrediccion").addEventListener("click",cerrarPrediccion);
+  document.getElementById("aceptarPrediccion").addEventListener("click",function(){
+    agregarPrediccion(document.getElementById("localPred").textContent, document.getElementById("visPred").textContent);
+  });
+
+  cargarEventoPrediccion();
+}
+
+function cargarEventoPrediccion(){
+  for(let i = 1; i <= 16; i++){
+    let identificacion = "predict-" + i;
+    document.getElementById(identificacion).addEventListener("click",function(){ 
+      desplegarPrediccion(parseInt(identificacion.split('-')[1]));
+    });
+  }
 }
 
 function cargarTabla(){
@@ -173,40 +192,30 @@ function cargarFixture(){
 }
 
 function cargarCartasConPredicciones(){
+  document.getElementById("Predicciones_").innerHTML = "";
   let lista = sis.getPartidos();
   let cont = 0;
   let ult = 0;
-  for(let i = 2; i < lista.length; i++){
+  for(let i = 0; i < lista.length; i++){
     let card = document.createElement('div');
     card.classList.add("mdc-card");
     card.id = "predict-"+lista[i].id;
-
     let h1 = document.createElement('h1');
     let fecha = document.createTextNode(lista[i].fecha);
     h1.appendChild(fecha);
-    
-
     let boton =  document.createElement('button');
     boton.setAttribute("class", "mdc-button mdc-button--raised mdc-button--leading");
     boton.id = "btnHorario";
-    
-
     let rip = document.createElement('span');
     rip.classList.add("mdc-button__ripple"); 
-    
-
     let ielem = document.createElement('i');
     ielem.classList.add("material-icons");
     ielem.classList.add("mdc-button__icon");
     ielem.setAttribute("aria-hidden", "true");
     let check = document.createTextNode("notifications");
-    
-    
     let span = document.createElement('span');
     span.classList.add("mdc-button__label");
     let hora = document.createTextNode(lista[i].hora);
-    
-
     let inter = document.createElement('div');
     inter.classList.add("carta-partido-equipos");
     let im1 = document.createElement('img');
@@ -217,22 +226,16 @@ function cargarCartasConPredicciones(){
     a.appendChild(vs);
     let im2 = document.createElement('img');
     im2.src = sis.devolverEquipo(lista[i].visitante).escudo;
-
     inter.appendChild(im1);
     inter.appendChild(a);
     inter.appendChild(im2);
-    
-
     let h3 = document.createElement('h3');
     let text = document.createTextNode("Tu Predicción:");
     h3.appendChild(text);
-    
-
     let h2 = document.createElement('h2');
-    let prediccion = document.createTextNode("0 - 0");
+    let prediccion = document.createTextNode(darResultado(lista[i].predLocal) + " - " + darResultado(lista[i].predVis));
     h2.appendChild(prediccion);
     h2.id = "prediccion";
-    
     card.appendChild(h1);
     card.appendChild(boton);
     boton.appendChild(rip);
@@ -243,13 +246,11 @@ function cargarCartasConPredicciones(){
     card.appendChild(inter);
     card.appendChild(h3);
     card.appendChild(h2);
-    
     if(cont == 0){
       let div = document.createElement('div');
       div.classList.add("cards-de-a-2");
       div.id = i;
       div.appendChild(card);
-
       document.getElementById("Predicciones_").appendChild(div);
       cont++;
       ult = i;
@@ -263,13 +264,8 @@ function cargarCartasConPredicciones(){
   }
 }
 
-document.getElementById("botonGrupos").addEventListener("click",desplegarDialogo);
-document.getElementById("cerrarDialogo").addEventListener("click",cerrarDialogo);
-document.getElementById("aceptarDialogo").addEventListener("click",agregarGrupo);
-
-document.getElementById("carta1"). addEventListener("click",prueba);
-function prueba(){
-  alert("YEPA");
+function darResultado(n){
+  return (n < 0) ? "?" : n;
 }
 
 function cerrarDialogo(){
@@ -299,20 +295,31 @@ function agregarGrupo(){
   }
 }
 
-// Creacion Cards
+function cerrarPrediccion(){
+  document.getElementById("predict").style.display="none";
+  document.getElementById("golLocal").value = "";
+  document.getElementById("golVis").value = "";
+}
 
-/*
-let card = document.createElement('div');
-card.classList.add("mdc-card");
-let inter = document.createElement('div');
-inter.classList.add("mdc-card__primary-action");
-inter.tabIndex = "0";
-let rip = document.createElement('div');
-rip.classList.add("mdc-card__ripple");
-let p = document.createElement('p');
-p.appendChild(imageU);
-inter.appendChild(p);
-inter.appendChild(rip);
-card.appendChild(inter);
-document.getElementById("cartas").appendChild(card);
-*/
+function desplegarPrediccion(id){
+  let partido = sis.devolverPartido(id);
+  document.getElementById("predict").style.display="block";
+  document.getElementById("localPred").innerHTML = partido.local;
+  document.getElementById("visPred").innerHTML = partido.visitante;
+}
+
+function agregarPrediccion(eLoc, eVis){
+  let local = document.getElementById("golLocal").value;
+  let vis = document.getElementById("golVis").value;
+  if(local < 0 || vis < 0){
+    alert("Deben ser números mayores o iguales a 0");
+  }
+  else{
+    let partido = sis.partidoPorParticipantes(eLoc, eVis);
+    alert(local + "-" + vis)
+    partido.setLocal(local);
+    partido.setVis(vis);
+    cerrarPrediccion();
+    cargarCartasConPredicciones();
+  }
+}
