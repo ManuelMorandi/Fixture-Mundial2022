@@ -79,7 +79,7 @@ let sis = new Sistema();
 window.addEventListener("load",datosPrecargados);
 
 function datosPrecargados(){
-  document.getElementById("bodyTabla").innerHTML = "";
+  //document.getElementById("bodyTabla").innerHTML = "";
   let g1 = new Grupo("Shawarma",7,7,true,"Manuwu");
   let g2 = new Grupo("Morbius Group",1,100,true,"Tadeus");
   let g3 = new Grupo("Fans de Messi",10568,30000,false,"Alfred");
@@ -87,9 +87,12 @@ function datosPrecargados(){
   sis.agregarGrupo(g2);
   sis.agregarGrupo(g3);
   cargarTabla();
+  
   idatos.insertarEquipos(sis);
   idatos.insertarPartidos(sis);
+
   cargarFixture();
+  cargarCartasConPredicciones();
 }
 
 function cargarTabla(){
@@ -118,7 +121,7 @@ function cargarTabla(){
 function cargarFixture(){
   let lista = sis.getPartidos();
   let fecha = lista[0].fecha;
-  for(let i = 1; i < lista.length; i++){
+  for(let i = 2; i < lista.length; i++){
     if(fecha != lista[i].fecha){
       let a = document.createElement('a');
       a.classList.add("fecha");
@@ -155,8 +158,8 @@ function cargarFixture(){
     ielem.appendChild(check);
     let span = document.createElement('span');
     span.classList.add("mdc-button__label");
-    let live = document.createTextNode(lista[i].hora);
-    span.appendChild(live);
+    let hora = document.createTextNode(lista[i].hora);
+    span.appendChild(hora);
     bot.appendChild(rip);
     bot.appendChild(ielem);
     bot.appendChild(span);
@@ -166,6 +169,97 @@ function cargarFixture(){
     inter.appendChild(bot);
     card.appendChild(inter);
     document.getElementById("partidos").appendChild(card);
+  }
+}
+
+function cargarCartasConPredicciones(){
+  let lista = sis.getPartidos();
+  let cont = 0;
+  let ult = 0;
+  for(let i = 2; i < lista.length; i++){
+    let card = document.createElement('div');
+    card.classList.add("mdc-card");
+    card.id = "predict-"+lista[i].id;
+
+    let h1 = document.createElement('h1');
+    let fecha = document.createTextNode(lista[i].fecha);
+    h1.appendChild(fecha);
+    
+
+    let boton =  document.createElement('button');
+    boton.setAttribute("class", "mdc-button mdc-button--raised mdc-button--leading");
+    boton.id = "btnHorario";
+    
+
+    let rip = document.createElement('span');
+    rip.classList.add("mdc-button__ripple"); 
+    
+
+    let ielem = document.createElement('i');
+    ielem.classList.add("material-icons");
+    ielem.classList.add("mdc-button__icon");
+    ielem.setAttribute("aria-hidden", "true");
+    let check = document.createTextNode("notifications");
+    
+    
+    let span = document.createElement('span');
+    span.classList.add("mdc-button__label");
+    let hora = document.createTextNode(lista[i].hora);
+    
+
+    let inter = document.createElement('div');
+    inter.classList.add("carta-partido-equipos");
+    let im1 = document.createElement('img');
+    im1.src = sis.devolverEquipo(lista[i].local).escudo;
+    let a = document.createElement('a');
+    let vs = document.createTextNode("vs");
+    a.classList.add("vs");
+    a.appendChild(vs);
+    let im2 = document.createElement('img');
+    im2.src = sis.devolverEquipo(lista[i].visitante).escudo;
+
+    inter.appendChild(im1);
+    inter.appendChild(a);
+    inter.appendChild(im2);
+    
+
+    let h3 = document.createElement('h3');
+    let text = document.createTextNode("Tu Predicción:");
+    h3.appendChild(text);
+    
+
+    let h2 = document.createElement('h2');
+    let prediccion = document.createTextNode("0 - 0");
+    h2.appendChild(prediccion);
+    h2.id = "prediccion";
+    
+    card.appendChild(h1);
+    card.appendChild(boton);
+    boton.appendChild(rip);
+    ielem.appendChild(check);
+    boton.appendChild(ielem);
+    span.appendChild(hora);
+    boton.appendChild(span);
+    card.appendChild(inter);
+    card.appendChild(h3);
+    card.appendChild(h2);
+    
+    if(cont == 0){
+      let div = document.createElement('div');
+      div.classList.add("cards-de-a-2");
+      div.id = i;
+      div.appendChild(card);
+
+      document.getElementById("Predicciones_").appendChild(div);
+      cont++;
+      ult = i;
+    }
+    else if (cont < 2) {
+      document.getElementById(ult).appendChild(card);
+      cont = 0;
+    }
+    //document.getElementById("Predicciones_").appendChild(card);
+    
   }
 }
 
