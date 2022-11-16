@@ -87,6 +87,31 @@ export default class Sistema {
   getPartidos() {
     return this.partidos;
   }
+  /**
+   * 
+   * @param {*} id 
+   * @returns 
+   */
+  devolverPartido(id){
+    for(let i = 0; i < this.getPartidos().length; i++){
+      if(this.getPartidos()[i].id === id){
+        return this.getPartidos()[i];
+      }
+    }
+  }
+  /**
+   * 
+   * @param {*} local 
+   * @param {*} vis 
+   * @returns 
+   */
+  partidoPorParticipantes(local, vis){
+    for(let i = 0; i < this.getPartidos().length; i++){
+      if(this.getPartidos()[i].local == local && this.getPartidos()[i].visitante == vis){
+        return this.getPartidos()[i];
+      }
+    }
+  }
 
   /**
    * Pre: Recibe la prediccion que se desea agregar
