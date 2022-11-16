@@ -280,6 +280,12 @@ header{
     }
 }
 
+.mdc-card:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #e0e0e0;
+}
+
 .mdc-card-partido {
   width: 99%;
   height: 10vh;

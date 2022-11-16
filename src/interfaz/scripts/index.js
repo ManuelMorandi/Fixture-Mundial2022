@@ -106,12 +106,17 @@ function datosPrecargados(){
 }
 
 function cargarEventoPrediccion(){
-  for(let i = 1; i <= 16; i++){
+  document.getElementById("predict-1").addEventListener("click",partidoComenzado);
+  for(let i = 2; i <= 16; i++){
     let identificacion = "predict-" + i;
     document.getElementById(identificacion).addEventListener("click",function(){ 
       desplegarPrediccion(parseInt(identificacion.split('-')[1]));
     });
   }
+}
+
+function partidoComenzado(){
+  alert("No se puede modificar predicción de un partido que ya inició 🙁");
 }
 
 function cargarTabla(){
@@ -140,7 +145,7 @@ function cargarTabla(){
 function cargarFixture(){
   let lista = sis.getPartidos();
   let fecha = lista[0].fecha;
-  for(let i = 2; i < lista.length; i++){
+  for(let i = 1; i < lista.length; i++){
     if(fecha != lista[i].fecha){
       let a = document.createElement('a');
       a.classList.add("fecha");
@@ -192,11 +197,31 @@ function cargarFixture(){
 }
 
 function cargarCartasConPredicciones(){
-  document.getElementById("Predicciones_").innerHTML = "";
+  let primerCard = `
+    <div class="cards-de-a-2" id="0">
+      <div class="mdc-card" id="predict-1">
+        <h1>HOY, 20 Nov</h1>
+        <button class="mdc-button mdc-button--raised mdc-button--leading" id="btnHorarioLive">
+          <span class="mdc-button__ripple"></span>
+          <i class="material-icons mdc-button__icon" aria-hidden="true">radio_button_checked</i>
+          <span class="mdc-button__label">Live</span>
+        </button>
+        <div class="carta-partido-equipos">
+          <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/qatar.jpg">
+          <a class="vs">vs</a>
+          <img src="https://paladarnegro.net/escudoteca/selecciones/selecciones/img/ecuador.jpg">
+        </div>
+        <h3>Tu Predicción:</h3>
+        <h2>0 - 0</h2>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("Predicciones_").innerHTML = primerCard;
   let lista = sis.getPartidos();
-  let cont = 0;
+  let cont = 1;
   let ult = 0;
-  for(let i = 0; i < lista.length; i++){
+  for(let i = 1; i < lista.length; i++){
     let card = document.createElement('div');
     card.classList.add("mdc-card");
     card.id = "predict-"+lista[i].id;
@@ -297,8 +322,8 @@ function agregarGrupo(){
 
 function cerrarPrediccion(){
   document.getElementById("predict").style.display="none";
-  document.getElementById("golLocal").value = "";
-  document.getElementById("golVis").value = "";
+  document.getElementById("golLocal").value = 0;
+  document.getElementById("golVis").value = 0;
 }
 
 function desplegarPrediccion(id){
@@ -311,15 +336,15 @@ function desplegarPrediccion(id){
 function agregarPrediccion(eLoc, eVis){
   let local = document.getElementById("golLocal").value;
   let vis = document.getElementById("golVis").value;
-  if(local < 0 || vis < 0){
-    alert("Deben ser números mayores o iguales a 0");
+  if(local < 0 || vis < 0 || local == "" || vis == ""){
+    alert("⚠ Deben ser números mayores o iguales a 0");
   }
   else{
     let partido = sis.partidoPorParticipantes(eLoc, eVis);
-    alert(local + "-" + vis)
     partido.setLocal(local);
     partido.setVis(vis);
     cerrarPrediccion();
     cargarCartasConPredicciones();
+    cargarEventoPrediccion();
   }
 }
