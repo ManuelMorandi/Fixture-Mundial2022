@@ -1,6 +1,5 @@
 import Grupo from "../../dominio/grupo.mjs";
 import Equipo from "../../dominio/equipo.mjs";
-import Prediccion from "../../dominio/prediccion.mjs";
 import Partido from "../../dominio/partido.mjs";
 import Sistema from "../../dominio/sistema.mjs";
 import * as idatos from "../../datos/insertarDatos.js";
