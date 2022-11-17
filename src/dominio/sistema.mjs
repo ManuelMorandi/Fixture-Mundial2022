@@ -7,7 +7,6 @@ export default class Sistema {
     this.grupos = [];
     this.equipos = [];
     this.partidos = [];
-    this.predicciones = [];
   }
     /**
      * VER BIEN EL TEMA DE JSDOCS
@@ -64,6 +63,7 @@ export default class Sistema {
         return this.getEquipos()[i];
       }
     }
+    throw new Error("El equipo de este pais no se encuentra en el mundial")
   }
 
   /**
@@ -87,48 +87,31 @@ export default class Sistema {
   getPartidos() {
     return this.partidos;
   }
-
   /**
-   * Pre: Recibe la prediccion que se desea agregar
-   * Pos: Si la prediccion no se agrego ya, lo agrega a la lista de predicciones existentes
-   *      En otro caso, modifica la prediccion en la lista
-   * @param {*} prediccion de tipo Prediccion
+   * 
+   * @param {*} id 
+   * @returns 
    */
-  agregarPrediccion(prediccion) {
-    let esta = this.predicciones.some(m => m.partido.id === prediccion.partido.id);
-    if (!esta) {
-      this.predicciones.push(prediccion);
-    } else {
-      //alert("Se modificará la predicción anterior");
-      console.log("Se modificará la predicción anterior");
-      this.modificarPrediccion(prediccion);
+  devolverPartido(id){
+    for(let i = 0; i < this.getPartidos().length; i++){
+      if(this.getPartidos()[i].id === id){
+        return this.getPartidos()[i];
+      }
     }
+    throw new Error("No existe el partido")
   }
   /**
-   * Pre: Recibe una prediccion
-   * Pos: Cambia los valores de local y visitante en la prediccion semejante guardada en la lista
-   * @param {*} prediccion tipo Prediccion
+   * 
+   * @param {*} local 
+   * @param {*} vis 
+   * @returns 
    */
-  modificarPrediccion(prediccion){
-    let index = this.predicciones.findIndex(x => x.partido.id === prediccion.partido.id);
-    this.predicciones[index].setLocal(prediccion.local);
-    this.predicciones[index].setVis(prediccion.visitante);
-  }
-  /**
-   * Pre: Recibe el id de un partido
-   * Pos: Elimina la prediccion vinculada a ese partido de la lista de predicciones
-   * @param {*} idPartido tipo int
-   */
-  eliminarPrediccion(idPartido){
-    let index = this.predicciones.findIndex(x => x.id === idPartido);
-    this.predicciones.splice(index, 1);
-  }
-  /**
-  * Pre: -
-  * Pos: Devuelve la lista de predicciones existentes
-  * @returns Array de elementos tipo Prediccion
-  */
-  getPredicciones() {
-    return this.predicciones;
+  partidoPorParticipantes(local, vis){
+    for(let i = 0; i < this.getPartidos().length; i++){
+      if(this.getPartidos()[i].local == local && this.getPartidos()[i].visitante == vis){
+        return this.getPartidos()[i];
+      }
+    }
+    throw new Error("No existe el partido")
   }
 }

@@ -1,4 +1,3 @@
-import { TestScheduler } from 'jest';
 import Grupo from './grupo.mjs'
 
 describe('creación de un grupo', () => {
