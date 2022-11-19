@@ -1,3 +1,5 @@
+// NOTA: No se va a usar esta clase, se deja por las dudas
+
 export default class Prediccion {
 
   // local,visitante :: int

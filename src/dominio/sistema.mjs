@@ -1,7 +1,8 @@
 export default class Sistema {
 
   /**
-   * Crea un objeto de la clase Sistema
+   * Crea una instacia de la clase Sistema.
+   * @constructor
    */
   constructor() {
     this.grupos = [];
@@ -9,11 +10,11 @@ export default class Sistema {
     this.partidos = [];
     this.predicciones = [];
   }
-    /**
-     * VER BIEN EL TEMA DE JSDOCS
-     * LUEGO GENERAMOS HTML CORRIENDO jsdocs <nombreArchivo>
-     * @param {Object} grupo de tipo Grupo
-     */
+    
+  /**
+   * Agrega un Grupo a la lista de Grupos, si el nombre no esta en uso.
+   * @param {Object} grupo - Objeto del Grupo que se va a agregar. 
+   */
   agregarGrupo(grupo) {
     let esta = this.grupos.some(m => m.nombre == grupo.nombre);
     if (!esta) {
@@ -23,18 +24,16 @@ export default class Sistema {
     }
   }
   /**
-   * Pre: -
-   * Pos: Devuelve la lista de grupos existentes
-   * @returns {Array} Array de elementos tipo Grupo
+   * Devuelve la lista de Grupos.
+   * @returns {Object[]} - Array con todos los objetos de la clase Grupo.
    */
   getGrupos() {
     return this.grupos;
   }
 
   /**
-   * Pre: Recibe el equipo que se desea agregar
-   * Pos: Si el equipo no se agrego ya, lo agrega a la lista de equipos existentes
-   * @param {*} equipo de tipo Equipo
+   * Agrega un Equipo a la lista de Equipos, si el nombre del pais no esta en uso.
+   * @param {Object} equipo - Objeto del Equipo que se va a agregar. 
    */
   agregarEquipo(equipo) {
     let esta = this.equipos.some(m => m.pais == equipo.pais);
@@ -45,18 +44,16 @@ export default class Sistema {
     }
   }
   /**
-  * Pre: -
-  * Pos: Devuelve la lista de equipos existentes
-  * @returns Array de elementos tipo Equipo
-  */
+   * Devuelve la lista de Equipos.
+   * @returns {Object[]} - Array con todos los objetos de la clase Equipo.
+   */
   getEquipos() {
     return this.equipos;
   }
   /**
-   * Pre: Recibe un String
-   * Pos: Devuelve el Equipo de ese pais
-   * @param {} pais de tipo String 
-   * @returns El objeto Equipo de ese pais
+   * Devuelve el objeto Equipo del pais solicitado.
+   * @param {string} pais - Nombre del pais.
+   * @returns {Object} - Objeto Equipo del pais solicitado.
    */
   devolverEquipo(pais){
     for(let i = 0; i < this.getEquipos().length; i++){
@@ -67,9 +64,8 @@ export default class Sistema {
   }
 
   /**
-   * Pre: Recibe el partido que se desea agregar
-   * Pos: Si el partido no se agrego ya, lo agrega a la lista de partidos existentes
-   * @param {*} partido de tipo Partido
+   * Agrega un Partido a la lista de Partidos, si el id no esta en uso.
+   * @param {Object} partido - Objeto del Partido que se va a agregar. 
    */
   agregarPartido(partido) {
     let esta = this.partidos.some(m => m.id == partido.id);
@@ -80,17 +76,16 @@ export default class Sistema {
     }
   }
   /**
-  * Pre: -
-  * Pos: Devuelve la lista de partidos existentes
-  * @returns Array de elementos tipo Partido
-  */
+   * Devuelve la lista de Partidos.
+   * @returns {Object[]} - Array con todos los objetos de la clase Partido.
+   */
   getPartidos() {
     return this.partidos;
   }
   /**
-   * 
-   * @param {*} id 
-   * @returns 
+   * Devuelve el objeto Partido que tiene ese id.
+   * @param {number} id - Identificador del partido a buscar.
+   * @returns {Object} - Objeto del Partido solicitado.
    */
   devolverPartido(id){
     for(let i = 0; i < this.getPartidos().length; i++){
@@ -100,25 +95,20 @@ export default class Sistema {
     }
   }
   /**
-   * 
-   * @param {*} local 
-   * @param {*} vis 
-   * @returns 
+   * Devuelve el partido jugado por los dos equipos.
+   * @param {string} local - Nombre del equipo local.
+   * @param {string} vis - Nombre del equipo visitante.
+   * @returns {Object} - Objeto del Partido solicitado.
    */
   partidoPorParticipantes(local, vis){
     for(let i = 0; i < this.getPartidos().length; i++){
       if(this.getPartidos()[i].local == local && this.getPartidos()[i].visitante == vis){
         return this.getPartidos()[i];
-      }
-    }
-  }
+      }
+    }
+  }
 
-  /**
-   * Pre: Recibe la prediccion que se desea agregar
-   * Pos: Si la prediccion no se agrego ya, lo agrega a la lista de predicciones existentes
-   *      En otro caso, modifica la prediccion en la lista
-   * @param {*} prediccion de tipo Prediccion
-   */
+  // NO UTILIZADA
   agregarPrediccion(prediccion) {
     let esta = this.predicciones.some(m => m.partido.id === prediccion.partido.id);
     if (!esta) {
@@ -129,30 +119,18 @@ export default class Sistema {
       this.modificarPrediccion(prediccion);
     }
   }
-  /**
-   * Pre: Recibe una prediccion
-   * Pos: Cambia los valores de local y visitante en la prediccion semejante guardada en la lista
-   * @param {*} prediccion tipo Prediccion
-   */
+  // NO UTILIZADA
   modificarPrediccion(prediccion){
     let index = this.predicciones.findIndex(x => x.partido.id === prediccion.partido.id);
     this.predicciones[index].setLocal(prediccion.local);
     this.predicciones[index].setVis(prediccion.visitante);
   }
-  /**
-   * Pre: Recibe el id de un partido
-   * Pos: Elimina la prediccion vinculada a ese partido de la lista de predicciones
-   * @param {*} idPartido tipo int
-   */
+  // NO UTILIZADA
   eliminarPrediccion(idPartido){
     let index = this.predicciones.findIndex(x => x.id === idPartido);
     this.predicciones.splice(index, 1);
   }
-  /**
-  * Pre: -
-  * Pos: Devuelve la lista de predicciones existentes
-  * @returns Array de elementos tipo Prediccion
-  */
+  // NO UTILIZADA
   getPredicciones() {
     return this.predicciones;
   }
