@@ -1,6 +1,14 @@
 export default class Grupo {
   
-  // nombre,lider :: String, max, part :: int, priv :: bool
+  /**
+   * Crea una instacia de la clase Grupo.
+   * @constructor
+   * @param {string} nombre - El nombre del Grupo.
+   * @param {number} part - Cantidad actual de participantes.
+   * @param {number} max - Cantidad maxima de participantes.
+   * @param {boolean} priv - Si es privado o no.
+   * @param {string} lider - Nombre del usuario con mas puntos.
+   */
   constructor(nombre, part, max, priv, lider){
     this.nombre = nombre;
     this.setPart(part);
@@ -10,11 +18,10 @@ export default class Grupo {
   }
 
   /**
-   * Pre: Recibe un int
-   * Pos: Si el input es mayor a 0, cambia participantes
-   * @param {*} part de tipo int
+   * En caso de ser una cantidad valida, cambia la cantidad de participantes actuales en el equipo.
+   * @param {number} part - La nueva cantidad de participantes actuales. 
    */
-   setPart(part){
+  setPart(part){
     if (part > 0){
       this.participantes = part;
     }
@@ -24,9 +31,8 @@ export default class Grupo {
   }
 
   /**
-   * Pre: Recibe un int
-   * Pos: Si el input es mayor a 1, cambia maximo
-   * @param {*} max de tipo int
+   * En caso de ser una cantidad valida, cambia la cantidad de participantes maximos en el equipo.
+   * @param {number} max - La nueva cantidad de participanes maximos.
    */
   setMax(max){
     if (max > 1){
