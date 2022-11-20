@@ -1,6 +1,5 @@
 import Grupo from "./grupo.mjs";
 import Equipo from "./equipo.mjs";
-import Prediccion from "./prediccion.mjs";
 import Partido from "./partido.mjs";
 import Sistema from "./sistema.mjs";
 
