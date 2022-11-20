@@ -99,7 +99,7 @@ function datosPrecargados(){
   document.getElementById("aceptarDialogo").addEventListener("click",agregarGrupo);
   document.getElementById("cerrarPrediccion").addEventListener("click",cerrarPrediccion);
   document.getElementById("aceptarPrediccion").addEventListener("click",function(){
-    agregarPrediccion(document.getElementById("localPred").textContent, document.getElementById("visPred").textContent);
+    agreagrPrediccion(document.getElementById("localPred").textContent, document.getElementById("visPred").textContent);
   });
 
   cargarEventoPrediccion();
