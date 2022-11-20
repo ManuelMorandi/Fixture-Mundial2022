@@ -1,5 +1,7 @@
+/**
+ * Clase que representa un Grupo.
+ */
 export default class Grupo {
-  
   /**
    * Crea una instacia de la clase Grupo.
    * @constructor
@@ -9,7 +11,7 @@ export default class Grupo {
    * @param {boolean} priv - Si es privado o no.
    * @param {string} lider - Nombre del usuario con mas puntos.
    */
-  constructor(nombre, part, max, priv, lider){
+  constructor(nombre, part, max, priv, lider) {
     this.nombre = nombre;
     this.setPart(part);
     this.setMax(max);
@@ -18,28 +20,29 @@ export default class Grupo {
   }
 
   /**
-   * En caso de ser una cantidad valida, cambia la cantidad de participantes actuales en el equipo.
-   * @param {number} part - La nueva cantidad de participantes actuales. 
+   * En caso de ser una cantidad valida,
+   * cambia la cantidad de participantes actuales en el equipo.
+   * @param {number} part - La nueva cantidad de participantes actuales.
    */
-  setPart(part){
-    if (part > 0){
+  setPart(part) {
+    if (part > 0) {
       this.participantes = part;
-    }
-    else {
+    } else {
       throw new Error('Tiene que haber algun jugador');
     }
   }
 
   /**
-   * En caso de ser una cantidad valida, cambia la cantidad de participantes maximos en el equipo.
+   * En caso de ser una cantidad valida,
+   * cambia la cantidad de participantes maximos en el equipo.
    * @param {number} max - La nueva cantidad de participanes maximos.
    */
-  setMax(max){
-    if (max > 1){
+  setMax(max) {
+    if (max > 1) {
       this.maximo = max;
-    }
-    else {
-      throw new Error('Tiene que haber por lo menos dos participantes en el grupo');
+    } else {
+      throw new Error(
+          'Tiene que haber por lo menos dos participantes en el grupo');
     }
   }
 }

@@ -1,5 +1,7 @@
+/**
+ * Clase que representa un Sistema.
+ */
 export default class Sistema {
-
   /**
    * Crea una instacia de la clase Sistema.
    * @constructor
@@ -12,10 +14,10 @@ export default class Sistema {
 
   /**
    * Agrega un Grupo a la lista de Grupos, si el nombre no esta en uso.
-   * @param {Object} grupo - Objeto del Grupo que se va a agregar. 
+   * @param {Object} grupo - Objeto del Grupo que se va a agregar.
    */
   agregarGrupo(grupo) {
-    let esta = this.grupos.some(m => m.nombre == grupo.nombre);
+    const esta = this.grupos.some((m) => m.nombre == grupo.nombre);
     if (!esta) {
       this.grupos.push(grupo);
     } else {
@@ -24,18 +26,19 @@ export default class Sistema {
   }
   /**
    * Devuelve la lista de Grupos.
-   * @returns {Object[]} - Array con todos los objetos de la clase Grupo.
+   * @return {Object[]} - Array con todos los objetos de la clase Grupo.
    */
   getGrupos() {
     return this.grupos;
   }
 
   /**
-   * Agrega un Equipo a la lista de Equipos, si el nombre del pais no esta en uso.
-   * @param {Object} equipo - Objeto del Equipo que se va a agregar. 
+   * Agrega un Equipo a la lista de Equipos,
+   * si el nombre del pais no esta en uso.
+   * @param {Object} equipo - Objeto del Equipo que se va a agregar.
    */
   agregarEquipo(equipo) {
-    let esta = this.equipos.some(m => m.pais == equipo.pais);
+    const esta = this.equipos.some((m) => m.pais == equipo.pais);
     if (!esta) {
       this.equipos.push(equipo);
     } else {
@@ -44,7 +47,7 @@ export default class Sistema {
   }
   /**
    * Devuelve la lista de Equipos.
-   * @returns {Object[]} - Array con todos los objetos de la clase Equipo.
+   * @return {Object[]} - Array con todos los objetos de la clase Equipo.
    */
   getEquipos() {
     return this.equipos;
@@ -52,23 +55,23 @@ export default class Sistema {
   /**
    * Devuelve el objeto Equipo del pais solicitado, en caso de existir.
    * @param {string} pais - Nombre del pais.
-   * @returns {Object} - Objeto Equipo del pais solicitado.
+   * @return {Object} - Objeto Equipo del pais solicitado.
    */
-  devolverEquipo(pais){
-    for(let i = 0; i < this.getEquipos().length; i++){
-      if(this.getEquipos()[i].pais === (pais)){
+  devolverEquipo(pais) {
+    for (let i = 0; i < this.getEquipos().length; i++) {
+      if (this.getEquipos()[i].pais === (pais)) {
         return this.getEquipos()[i];
       }
     }
-    throw new Error("El equipo de este pais no se encuentra en el mundial")
+    throw new Error('El equipo de este pais no se encuentra en el mundial');
   }
 
   /**
    * Agrega un Partido a la lista de Partidos, si el id no esta en uso.
-   * @param {Object} partido - Objeto del Partido que se va a agregar. 
+   * @param {Object} partido - Objeto del Partido que se va a agregar.
    */
   agregarPartido(partido) {
-    let esta = this.partidos.some(m => m.id == partido.id);
+    const esta = this.partidos.some((m) => m.id == partido.id);
     if (!esta) {
       this.partidos.push(partido);
     } else {
@@ -77,7 +80,7 @@ export default class Sistema {
   }
   /**
    * Devuelve la lista de Partidos.
-   * @returns {Object[]} - Array con todos los objetos de la clase Partido.
+   * @return {Object[]} - Array con todos los objetos de la clase Partido.
    */
   getPartidos() {
     return this.partidos;
@@ -85,28 +88,29 @@ export default class Sistema {
   /**
    * Devuelve el objeto Partido que tiene ese id, en caso de existir.
    * @param {number} id - Identificador del partido a buscar.
-   * @returns {Object} - Objeto del Partido solicitado.
+   * @return {Object} - Objeto del Partido solicitado.
    */
-  devolverPartido(id){
-    for(let i = 0; i < this.getPartidos().length; i++){
-      if(this.getPartidos()[i].id === id){
+  devolverPartido(id) {
+    for (let i = 0; i < this.getPartidos().length; i++) {
+      if (this.getPartidos()[i].id === id) {
         return this.getPartidos()[i];
       }
     }
-    throw new Error("No existe el partido")
+    throw new Error('No existe el partido');
   }
   /**
    * Devuelve el partido jugado por los dos equipos, en caso de existir.
    * @param {string} local - Nombre del equipo local.
    * @param {string} vis - Nombre del equipo visitante.
-   * @returns {Object} - Objeto del Partido solicitado.
+   * @return {Object} - Objeto del Partido solicitado.
    */
-  partidoPorParticipantes(local, vis){
-    for(let i = 0; i < this.getPartidos().length; i++){
-      if(this.getPartidos()[i].local == local && this.getPartidos()[i].visitante == vis){
+  partidoPorParticipantes(local, vis) {
+    for (let i = 0; i < this.getPartidos().length; i++) {
+      if (this.getPartidos()[i].local == local &&
+      this.getPartidos()[i].visitante == vis) {
         return this.getPartidos()[i];
       }
     }
-    throw new Error("No existe el partido")
+    throw new Error('No existe el partido');
   }
 }
