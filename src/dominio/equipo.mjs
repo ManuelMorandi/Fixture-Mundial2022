@@ -1,3 +1,6 @@
+/**
+ * Clase que representa un Equipo.
+ */
 export default class Equipo {
 
   /**
@@ -6,9 +9,8 @@ export default class Equipo {
    * @param {string} pais - El nombre del pais.
    * @param {string} escudo - Link a la foto del escudo de la seleccion.
    */
-  constructor(pais, escudo){
+  constructor(pais, escudo) {
     this.pais = pais;
     this.escudo = escudo;
   }
-    
 }

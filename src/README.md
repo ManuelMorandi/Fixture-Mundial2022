@@ -52,7 +52,7 @@ Cursos alternativos:
 
 5.1: Si el resultado no es válido (tiene valores negativos o letras), se pide reingresar.
 
-<img src="bocetosiu/Prototipo_PartidosParaPredecir.png" width="300">    <img src="bocetosiu/Prototipo_HacerPrediccion.png" width="300"><br>
+<img src="../docs/bocetosiu/Prototipo_PartidosParaPredecir.png" width="300">    <img src="../docs/bocetosiu/Prototipo_HacerPrediccion.png" width="300"><br>
 
 Configuración de plataforma tecnológica para desarrollo y producción
 
@@ -86,9 +86,43 @@ Estos componentes también son altamente personalizables, por lo que podemos mod
 
 Aplicar un sistema de diseño y principios de usabilidad
 
+Para el diseño de esta aplicación, se tomó como referencia otras disponibles que cumplen funciones similares, tales como OneFootball o ForzaFootball. Se tomaron sus interfaces como referencia, asegurándonos de esta manera de que el resultado final tenga una interfaz estética, fácil de usar y comprensible para los usuarios, ya que el público objetivo está acostumbrado a su estructura. Adicionalmente, usar Material Design Web Components nos permite formar la interfaz con elementos ideados por Google, por lo que el usuario estará acostumbrados a ellos y conocerá su funcionamiento, siendo cómodo su uso.
+
+En cuanto respecta a la usabilidad y accesibilidad, se buscó cumplir las heurísticas de Nielsen:
+
+- Visibilidad del estatus del sistema: Todas las acciones generan una reacción, por lo que es fácil encontrar botones, tabs, etc., así como saber cuando ocurre un cambio (se guarda predicción, por ejemplo).
+- Vínculo entre el sistema y el mundo real: Los elementos del sistema se presentan de manera tal que el usuario promedio pueda entenderlo. No se usan notaciones ni términos complejos, específicos del entorno, se usan palabras e ideas que el usuario conoce y entiende.
+- Libertad y control del usuario.
+- Consistencia y estándares: como ya se mencionó, la IU está diseñada de manera que el usuario conozca todos los elementos y sepa interactuar con ellos.
+- Prevención de errores: las acciones que llevan a problemas en el sistema (poner que un equipo va a meter una cantidad negativa de goles, por ejemplo) se evitan a través de alertas.
+- Reconocimiento en vez de memorización: se usan iconos y botones que el usuario puede relacionar sencillamente con su función.
+- Flexibilidad y eficiencia de uso: el sistema puede ser usado por gente experimentada en estas aplicaciones, así como novatos en las pencas. Es flexible y se adapta a todos los usuarios.
+- Diseño minimalista.
+- Ayuda al usuario a reconocer, diagnosticar y recuperarse de errores: se alertan los posibles errores y se puede regresar a pasos anteriores.
+- Ayuda y documentación: existen informes con información del funcionamiento del sistema para guiar al usuario.
+
 Cumplimiento de estándar de accesibilidad WCAG
 
+Nuestra intención es hacer que la mayor cantidad de personas puedan utilizar nuestra aplicación, por esta razón no solo hicimos que la aplicación fuera adaptable a diferentes dispositivos, sino que también buscamos implementar reglas WCAG para permitirnos llegar a más usuarios.
+
+Web Content Accessibility Guidelines (WCAG), son pautas que indican cómo hacer el contenido de la web accesible para personas con discapacidad.
+
+Reglas con las que cumplimos y buscamos cumplir para dar mayor accesibilidad:
+
+- Alternativas a texto
+    - El sistema busca ser una aplicación intuitiva utilizando mayormente imágenes, sobre todo en las funciones principales.
+- Distinguible
+    - El sistema posee colores muy diferentes que permiten a casi cualquier usuario (hasta aquellos con visión reducida) diferenciar los componentes.
+    - Se espera implementar la posibilidad de cambiar el tamaño del texto para versiones futuras.
+- Accesible con diferentes interfaces
+    - Queremos que el sistema sea completamente funcional ya sea solo con teclado o solo con un mouse. Tambíen (ya implementado) el utilizarla por medio del touch.
+- Legible
+    - Cuando el sistema usa texto, a excepción de las noticias, el texto mostrado en pantalla es simple y descriptivo.
+    - Existirá la posibilidad de cambiar el idioma.
+
 Seguir especificación de estilo
+
+si ⚽
 
 ## **Codificación**
 
@@ -98,7 +132,7 @@ El IDE utilizado durante todo el proyecto será Visual Studio Code de Microsoft.
 
 Estándares de codificación Google (HTML, CSS, JavaScript)
 
-Buscamos desarrollar un código claro, prolijo y comprensible. Para esto seguiremos los estándares de codificación de Google, ya que son de los más aceptados y populares. Usaremos esLint (se explica a continuación) para poder verificar que nuestros códigos cumplen el estándar de manera automática. Esta herramienta también nos permite establecer reglas personalizadas que nosotros consideramos convenientes.
+Buscamos desarrollar un código claro, prolijo y comprensible. Para esto seguiremos los estándares de codificación de Google, ya que son de los más aceptados y populares. Usaremos esLint (se explica a continuación) para poder verificar que nuestros códigos cumplen el estándar, y arreglarlo de manera automática en caso de que no sea así. Esta herramienta también nos permite establecer reglas personalizadas que nosotros consideramos convenientes.
 
 Buenas prácticas de OOP: separación de lógica e interfaz
 
@@ -110,15 +144,26 @@ El análisis estático de código se trata en realizar comprobaciones de manera 
 
 Para esto, usaremos esLint, herramienta de linting que además de resaltar los problemas, nos permite solucionarlos automáticamente. Además, nos permite personalizar todo, seleccionando los estándares que buscamos seguir, las reglas adicionales que implementamos nosotros, entre otros.
 
-Para instalarlo corremos npm install eslint. Para inicializarlo, desde nuestro directorio de NodeJS, corremos npx eslint --init. Ahora seleccionamos todos los estándares que queremos para nuestro proyecto. Finalmente, para analizar un archivo corremos npx eslint <DireccionDelArchivo>.
+Para instalarlo corremos npm install eslint. Para inicializarlo, desde nuestro directorio de NodeJS, corremos `npx eslint --init`. Ahora seleccionamos todos los estándares que queremos para nuestro proyecto. Finalmente, para analizar un archivo corremos `npx eslint <DireccionDelArchivo>`. 
+
+En muchos casos, los errores pueden solucionarse automáticamente. Para esto debemos usar `npx eslint <DireccionDelArchivo> --fix`.
 
 ## **Test unitario**
 
-Test unitarios en Jest
+¿Que es el testing? 
+En la tecnología, testear el código significa verificar que el mismo cumple con las expectativas. Es decir, por ejemplo, que habiendo creado una función A, la misma de la salida esperada con una entrada especifica.
 
-100% cobertura en clases de dominio
+Para verificar la funcionalidad del código de la pagina web hicimos uso de Jest, una librería de JavaScript que tiene como objetivo crear, correr y estructurar tests. Jest es uno de los programas de testeo mas populares actualmente y tiene uso en proyectos de web.
 
-| En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021). A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
+Para instalar Jest es necesario instalarlo, para ello hay que correr `npm install --save-dev jest`. 
+
+El código que debíamos de testear, son las clases ejemplo.mjs del dominio. Para ello se debe de crear un archivo ejemplo.test.js de cada una de ellas con el objetivo de cubrir en el testeo todas las funciones y el constructor de las clases. 
+
+Finalmente, luego de poner todas las expectativas de las salidas de nuestro código según la entrada, para correr el test hay que escribir el siguiente comando en la terminal `npm run test`. Y los resultados aparecerán en la terminal misma.
+
+Jest pondrá en rojo las pruebas que no han cumplido con las expectativas y en verde las pruebas correctas. También nos dirá si nos falto cubrir alguna linea en alguna clase. Cuando todas las pruebas estén correctas y todas las lineas estén testeadas, se podría decir que finalizaste el testeo.
+
+En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021). A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
 
 ## **Test de sistema**
 
